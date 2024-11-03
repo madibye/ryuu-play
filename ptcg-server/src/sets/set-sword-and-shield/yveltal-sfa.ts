@@ -25,7 +25,7 @@ function* useDestructiveBeam(next: Function, store: StoreLike, state: State,
     next();
   });
   
-  if (flipResult) { return state; } 
+  if (!flipResult) { return state; } 
   
   let cards: Card[] = [];
   yield store.prompt(state, new ChooseCardsPrompt(player.id, GameMessage.CHOOSE_CARD_TO_DISCARD, opponent.active,
@@ -61,9 +61,7 @@ export class YveltalSFA extends PokemonCard {
     },
     {
       name: 'Destructive Beam',
-      cost: [ 
-        //CardType.DARK, CardType.DARK, CardType.COLORLESS 
-      ],
+      cost: [ CardType.DARK, CardType.DARK, CardType.COLORLESS ],
       damage: 100,
       text: 'Flip a coin. If heads, discard an Energy from your opponent\'s Active Pokemon.'
     },
