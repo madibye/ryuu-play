@@ -3,6 +3,7 @@ import { Charizard } from './charizard';
 import { Charmander } from './charmander';
 import { Charmander2 } from './charmander2';
 import { Charmeleon } from './charmeleon';
+import { YveltalSFA } from './yveltal-sfa';
 import { FireCrystal } from './fire-crystal';
 import { GiantHearth } from './giant-hearth';
 import { Leon } from './leon';
@@ -18,6 +19,7 @@ export const setSwordAndShield: Card[] = [
   new Charmeleon(),
   new FireCrystal(),
   new GiantHearth(),
+  new YveltalSFA(),
   new Leon(),
   new Oranguru(),
   new Rosa(),
