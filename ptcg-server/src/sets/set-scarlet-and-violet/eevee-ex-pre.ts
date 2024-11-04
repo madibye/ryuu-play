@@ -28,8 +28,6 @@ export class EeveeEXPRE extends PokemonCard {
       text: ''
     },
   ];
-
-  public readonly RAINBOW_DNA_MARKER = 'RAINBOW_DNA_MARKER';
   
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     if (effect instanceof PowerEffect && effect.power === this.powers[0]) {
@@ -43,19 +41,26 @@ export class EeveeEXPRE extends PokemonCard {
         return ((p.evolvesFrom == 'Eevee') && (p.tags.includes(CardTag.POKEMON_EX_SV)));
       })) { throw new GameError(GameMessage.CANNOT_USE_POWER); }
 
+      const evolveBlocked: number[] = [];
+      player.hand.cards.forEach((p, index) => {
+        if (p instanceof PokemonCard) {
+          if (!((p.evolvesFrom == 'Eevee') && (p.tags.includes(CardTag.POKEMON_EX_SV)))) {
+            evolveBlocked.push(index);
+          }
+        } 
+      });
+
       let cards: Card[] = [];
       return store.prompt(state, new ChooseCardsPrompt(
         player.id,
         GameMessage.CHOOSE_POKEMON_TO_EVOLVE,
         player.hand,
-        { superType: SuperType.POKEMON, evolvesFrom: 'Eevee' },
-        { min:1, max: 1, allowCancel: true }
+        { superType: SuperType.POKEMON },
+        { min:1, max: 1, allowCancel: true, blocked: evolveBlocked }
       ), selected => {
         cards = selected || [];
-        
         if (cards.length > 0) {
           const pokemonCard = cards[0] as PokemonCard;
-          if (!pokemonCard.tags.includes(CardTag.POKEMON_EX_SV)) { throw new GameError(GameMessage.INVALID_TARGET); }
           const evolveEffect = new EvolveEffect(player, cardList, pokemonCard);
           store.reduceEffect(state, evolveEffect);
         }

@@ -75,11 +75,9 @@ export class GlaceonEXPRE extends PokemonCard {
         GameMessage.CHOOSE_POKEMON_TO_DAMAGE,
         PlayerType.TOP_PLAYER,
         [ SlotType.BENCH ],
-        { allowCancel: false, blocked: euclaseBlocked }
+        { min: 1, max: 1, allowCancel: false, blocked: euclaseBlocked }
       ), targets => {
-        if (!targets || targets.length === 0) {
-          return;
-        }
+        if (!targets || targets.length === 0) { return; }
         const koEffect = new KnockOutEffect(player, targets[0]);
         store.reduceEffect(state, koEffect);
       });
