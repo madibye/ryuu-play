@@ -46,10 +46,8 @@ export class AbsolTEU extends PokemonCard {
         store.reduceEffect(state, powerEffect);
       } catch { return state; }
       // If we're all good, add a C to the retreat cost
-      console.log('adding 1 C to retreat cost of ' + oppActiveCard.fullName);
       opponent.marker.addMarker(this.DARK_AMBITION_MARKER, oppActiveCard);
       effect.cost = effect.cost.concat([ CardType.COLORLESS ]);
-      console.log(effect.cost);
     }
 
     // Shadow Seeker
