@@ -23,7 +23,7 @@ export class EeveeEXPRE extends PokemonCard {
   public attacks = [
     {
       name: 'Coruscating Quartz',
-      cost: [], // [ CardType.FIRE, CardType.WATER, CardType.LIGHTNING ],
+      cost: [ CardType.FIRE, CardType.WATER, CardType.LIGHTNING ],
       damage: 200,
       text: ''
     },

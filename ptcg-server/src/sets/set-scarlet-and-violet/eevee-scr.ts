@@ -15,13 +15,13 @@ export class EeveeSCR extends PokemonCard {
   public attacks = [
     {
       name: 'Call for Family',
-      cost: [], // [ CardType.COLORLESS ],
+      cost: [ CardType.COLORLESS ],
       damage: 0,
       text: 'Search your deck for a Basic Pokemon and put it onto your Bench. Then, shuffle your deck.'
     },
     {
       name: 'Gnaw',
-      cost: [], // [ CardType.COLORLESS, CardType.COLORLESS ],
+      cost: [ CardType.COLORLESS, CardType.COLORLESS ],
       damage: 20,
       text: '',
     },

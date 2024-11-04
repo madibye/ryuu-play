@@ -17,13 +17,13 @@ export class GlaceonEXPRE extends PokemonCard {
   public attacks = [
     {
       name: 'Frost Bullet',
-      cost: [], // [ CardType.WATER, CardType.COLORLESS ],
+      cost: [ CardType.WATER, CardType.COLORLESS ],
       damage: 110,
       text: 'This attack does 30 damage to 1 of your opponent\'s Benched Pokemon.'
     },
     {
       name: 'Euclase',
-      cost: [], // [ CardType.GRASS, CardType.WATER, CardType.DARK ],
+      cost: [ CardType.GRASS, CardType.WATER, CardType.DARK ],
       damage: 0,
       text: 'Knock Out 1 of your opponent\'s Pokemon that has exactly 6 damage counters on it.'
     },
