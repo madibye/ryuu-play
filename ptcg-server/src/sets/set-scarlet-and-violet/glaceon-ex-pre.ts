@@ -11,7 +11,7 @@ export class GlaceonEXPRE extends PokemonCard {
   public hp: number = 270;
   public weakness = [{ type: CardType.METAL }];
   public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public set = 'SVI';
   public name = 'Glaceon ex';
   public fullName = 'Glaceon ex PRE';
   public attacks = [

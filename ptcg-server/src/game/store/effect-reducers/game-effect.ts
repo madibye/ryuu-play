@@ -110,9 +110,22 @@ export function gameReducer(store: StoreLike, state: State, effect: Effect): Sta
     if (card !== undefined) {
 
       // Pokemon ex rule
-      if (card.tags.includes(CardTag.POKEMON_EX)) {
+      if ((card.tags.includes(CardTag.POKEMON_EX)) || 
+          (card.tags.includes(CardTag.POKEMON_GX)) || 
+          (card.tags.includes(CardTag.POKEMON_V)) || 
+          (card.tags.includes(CardTag.POKEMON_VSTAR)) || 
+          (card.tags.includes(CardTag.POKEMON_EX_SV))
+      ) {
         effect.prizeCount += 1;
       }
+      
+      // TAG TEAM / VMAX rule
+      if ((card.tags.includes(CardTag.POKEMON_TAG_TEAM_GX)) || 
+          (card.tags.includes(CardTag.POKEMON_VMAX))
+      ) {
+        effect.prizeCount += 1;
+      }
+
 
       store.log(state, GameLog.LOG_POKEMON_KO, { name: card.name });
       effect.target.moveTo(effect.player.discard);

@@ -6,3 +6,4 @@ export * from './set-diamond-and-pearl';
 export * from './set-hgss';
 export * from './set-op9';
 export * from './set-sword-and-shield';
+export * from './set-scarlet-and-violet';

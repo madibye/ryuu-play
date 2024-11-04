@@ -2,7 +2,7 @@ import { PlayPokemonEffect } from '../effects/play-card-effects';
 import { GameError } from '../../game-error';
 import { GameMessage, GameLog } from '../../game-message';
 import { Effect } from '../effects/effect';
-import { Stage } from '../card/card-types';
+import { CardTag, Stage } from '../card/card-types';
 import { State } from '../state/state';
 import { StoreLike } from '../store-like';
 import { CheckPokemonPlayedTurnEffect } from '../effects/check-effects';
@@ -26,7 +26,7 @@ export function playPokemonReducer(store: StoreLike, state: State, effect: Effec
       return state;
     }
 
-    const isEvolved = stage === Stage.STAGE_1 || Stage.STAGE_2;
+    const isEvolved = stage === Stage.STAGE_1 || Stage.STAGE_2 || Stage.VMAX || Stage.VSTAR;
     const evolvesFrom = effect.pokemonCard.evolvesFrom;
     const pokemonCard = effect.target.getPokemonCard();
     if (pokemonCard === undefined) {

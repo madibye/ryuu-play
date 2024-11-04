@@ -47,7 +47,7 @@ export class YveltalSFA extends PokemonCard {
   public weakness = [{ type: CardType.LIGHTNING }];
   public resistance = [{ type: CardType.FIGHTING, value: -30 }];
   public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public set = 'SVI';
   public name = 'Yveltal';
   public fullName = 'Yveltal SFA';
   public attacks = [

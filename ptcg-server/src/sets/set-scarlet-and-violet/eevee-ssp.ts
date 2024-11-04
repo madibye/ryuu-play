@@ -9,9 +9,9 @@ export class EeveeSCR extends PokemonCard {
   public hp: number = 60;
   public weakness = [{ type: CardType.FIGHTING }];
   public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public set = 'SVI';
   public name = 'Eevee';
-  public fullName = 'Eevee SCR';
+  public fullName = 'Eevee SSP';
   public attacks = [
     {
       name: 'Call for Family',

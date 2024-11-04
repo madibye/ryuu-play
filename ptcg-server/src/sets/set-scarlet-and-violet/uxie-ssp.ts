@@ -10,7 +10,7 @@ export class UxieSSP extends PokemonCard {
   public weakness = [{ type: CardType.DARK }];
   public resistance = [{ type: CardType.FIGHTING, value: -30 }];
   public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public set = 'SVI';
   public name = 'Uxie';
   public fullName = 'Uxie SSP';
   public attacks = [

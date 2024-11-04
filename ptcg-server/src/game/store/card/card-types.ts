@@ -1,9 +1,14 @@
 
 export enum CardTag {
+  POKEMON_LV_X = 'LV_X',
   POKEMON_SP = 'SP',
   POKEMON_EX = 'EX',
   POKEMON_GX = 'GX',
-  POKEMON_LV_X = 'LV_X',
+  POKEMON_TAG_TEAM_GX = 'GX',
+  POKEMON_V = 'V',
+  POKEMON_VMAX = 'VMAX',
+  POKEMON_VSTAR = 'VSTAR',
+  POKEMON_EX_SV = 'ex',
   ACE_SPEC = 'ACE_SPEC'
 }
 
@@ -38,6 +43,8 @@ export enum Stage {
   BASIC,
   STAGE_1,
   STAGE_2,
+  VMAX,
+  VSTAR,
 }
 
 export enum CardType {

@@ -9,7 +9,7 @@ export class AzelfSSP extends PokemonCard {
   public weakness = [{ type: CardType.LIGHTNING }];
   public resistance = [{ type: CardType.FIGHTING, value: -20 }];
   public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public set = 'SVI';
   public name = 'Azelf';
   public fullName = 'Azelf SSP';
   public attacks = [
