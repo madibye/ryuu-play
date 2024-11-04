@@ -9,6 +9,7 @@ export enum CardTag {
   POKEMON_VMAX = 'VMAX',
   POKEMON_VSTAR = 'VSTAR',
   POKEMON_EX_SV = 'ex',
+  POKEMON_TERA = 'Tera',
   ACE_SPEC = 'ACE_SPEC'
 }
 

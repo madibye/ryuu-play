@@ -4,7 +4,7 @@ import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect, KnockOutEffect } from '../../game/store/effects/game-effects';
 
 export class GlaceonEXPRE extends PokemonCard {
-  public tags = [ CardTag.POKEMON_EX ];
+  public tags = [ CardTag.POKEMON_EX_SV, CardTag.POKEMON_TERA ];
   public stage: Stage = Stage.STAGE_1;
   public evolvesFrom = 'Eevee';
   public cardType: CardType = CardType.WATER;

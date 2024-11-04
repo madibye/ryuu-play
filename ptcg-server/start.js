@@ -18,6 +18,7 @@ cardManager.defineSet(sets.setBlackAndWhite2);
 cardManager.defineSet(sets.setBlackAndWhite3);
 cardManager.defineSet(sets.setBlackAndWhite4);
 cardManager.defineSet(sets.setSwordAndShield);
+cardManager.defineSet(sets.setScarletAndViolet);
 
 StateSerializer.setKnownCards(cardManager.getAllCards());
 

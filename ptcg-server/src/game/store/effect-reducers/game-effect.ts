@@ -123,7 +123,7 @@ export function gameReducer(store: StoreLike, state: State, effect: Effect): Sta
       if ((card.tags.includes(CardTag.POKEMON_TAG_TEAM_GX)) || 
           (card.tags.includes(CardTag.POKEMON_VMAX))
       ) {
-        effect.prizeCount += 1;
+        effect.prizeCount += 2;
       }
 
 
