@@ -15,8 +15,6 @@ function* useDestructiveBeam(next: Function, store: StoreLike, state: State,
   if (!opponent.active.cards.some(c => c instanceof EnergyCard)) {
     return state;
   }
-
-  console.log('Has energy attached');
   
   // Flip the coin
   let flipResult = false;
@@ -47,7 +45,7 @@ export class YveltalSFA extends PokemonCard {
   public cardType: CardType = CardType.DARK;
   public hp: number = 120;
   public weakness = [{ type: CardType.LIGHTNING }];
-  public resistance = [{ type: CardType.FIGHTING, value: -20 }];
+  public resistance = [{ type: CardType.FIGHTING, value: -30 }];
   public retreat = [ CardType.COLORLESS ];
   public set = 'SSH';
   public name = 'Yveltal';
@@ -71,7 +69,7 @@ export class YveltalSFA extends PokemonCard {
     // Corrosive Winds
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
       const opponent = effect.opponent;
-      opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList, card) => {
+      opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList) => {
         if ((cardList.damage > 0)) {
           const putCountersEffect = new PutCountersEffect(effect, 20);
           putCountersEffect.target = cardList;
