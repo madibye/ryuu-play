@@ -14,6 +14,8 @@ import { Snorlax } from './snorlax';
 import { Welder } from './welder';
 import { MespritSSP } from './mesprit-ssp';
 import { AzelfSSP } from './azelf-ssp';
+import { GlaceonEXPRE } from './glaceon-ex-pre';
+import { EeveeSCR } from './eevee-scr';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -26,6 +28,8 @@ export const setSwordAndShield: Card[] = [
   new UxieSSP(),
   new MespritSSP(),
   new AzelfSSP(),
+  new EeveeSCR(),
+  new GlaceonEXPRE(),
   new Leon(),
   new Oranguru(),
   new Rosa(),
