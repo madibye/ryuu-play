@@ -20,7 +20,7 @@ function* playCard(next: Function, store: StoreLike, state: State,
     b.getPokemonCard()?.tags.includes(CardTag.POKEMON_GX) || 
     b.getPokemonCard()?.tags.includes(CardTag.POKEMON_EX)
   );
-  let cards: Card[] = player.hand.cards.filter(c => c !== self);
+  const cards: Card[] = player.hand.cards.filter(c => c !== self);
   if (!hasBench || cards.length < 2) { throw new GameError(GameMessage.CANNOT_PLAY_THIS_CARD); }
 
   // We will discard this card after prompt confirmation
@@ -28,23 +28,24 @@ function* playCard(next: Function, store: StoreLike, state: State,
 
   // Discard cards (excluding this card from the prompt)
   const handTemp = new CardList();
-  handTemp.cards = player.hand.cards.filter(c => c !== self);
-  store.prompt(state, new ChooseCardsPrompt(
+  handTemp.cards = cards;
+  let discardCards: Card[] = [];
+  yield store.prompt(state, new ChooseCardsPrompt(
     player.id,
     GameMessage.CHOOSE_CARD_TO_DISCARD,
     handTemp,
     { },
     { min: 2, max: 2, allowCancel: true }
   ), selected => {
-    cards = selected || [];
+    discardCards = selected || [];
     next();
   });
 
-  if (cards.length == 0) { return state; }  // Operation canceled by the user
+  if (discardCards.length == 0) { return state; }  // Operation canceled by the user
   
   // Can't cancel next prompt, so now discard things
   player.hand.moveCardTo(self, player.discard);
-  player.hand.moveCardsTo(cards, player.discard);
+  player.hand.moveCardsTo(discardCards, player.discard);
 
   // Can only gust EX or GX
   const gustBlocked: CardTarget[] = [];
