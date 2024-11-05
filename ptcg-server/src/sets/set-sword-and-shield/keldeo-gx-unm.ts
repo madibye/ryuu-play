@@ -22,13 +22,13 @@ export class KeldeoGXUNM extends PokemonCard {
   public attacks = [
     {
       name: 'Sonic Edge',
-      cost: [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
+      cost: [], // [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
       damage: 110,
       text: 'This attack\'s damage isn\'t affected by any effects on your opponent\'s Active Pokemon.'
     },
     {
       name: 'Resolute Blade-GX',
-      cost: [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
+      cost: [], // [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
       damage: 0,
       text: 'This attack does 50 damage for each of your opponent\'s Benched Pokemon. ' + 
       '(You can\'t use more than 1 GX attack in a game.)'
@@ -58,22 +58,21 @@ export class KeldeoGXUNM extends PokemonCard {
     }
 
     // Sonic Edge
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
-      const damage = effect.damage;
-      effect.damage = 0;
-      if (damage > 0) { effect.opponent.active.damage += damage; }
-    }
+    //if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
+    //  const damage = effect.damage;
+    //  effect.damage = 0;
+    //  if (damage > 0) { effect.opponent.active.damage += damage; }
+    //}
 
     // Resolute Blade-GX
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       const player = effect.player;
       const opponent = effect.opponent;
-      if (player.usedGX == true) { 
-        throw new GameError(GameMessage.LABEL_GX_USED); 
-      }
+      if (player.usedGX == true) { throw new GameError(GameMessage.LABEL_GX_USED); }
       player.usedGX = true;
-      opponent.bench.forEach(_p => effect.damage += 50);
-      player.usedGX = true;
+      let benchCount = 0;
+      opponent.bench.forEach(b => benchCount += b.cards.length > 0 ? 1 : 0);
+      effect.damage = 50 * benchCount;
     }
 
     return state;

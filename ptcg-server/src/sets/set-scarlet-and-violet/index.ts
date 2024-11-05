@@ -6,6 +6,8 @@ import { AzelfSSP } from './azelf-ssp';
 import { GlaceonEXPRE } from './glaceon-ex-pre';
 import { EeveeSCR } from './eevee-scr';
 import { EeveeEXPRE } from './eevee-ex-pre';
+import { ClemontsQuickWit } from './clemonts-quick-wit';
+import { JasminesGaze } from './jasmines-gaze';
 
 export const setScarletAndViolet: Card[] = [
   new YveltalSFA(),
@@ -14,5 +16,7 @@ export const setScarletAndViolet: Card[] = [
   new AzelfSSP(),
   new EeveeSCR(),
   new EeveeEXPRE(),
-  new GlaceonEXPRE()
+  new GlaceonEXPRE(),
+  new ClemontsQuickWit(),
+  new JasminesGaze(),
 ];
