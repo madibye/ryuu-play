@@ -5,6 +5,7 @@ import { Charmander } from './charmander';
 import { Charmander2 } from './charmander2';
 import { Charmeleon } from './charmeleon';
 import { CherishBall } from './cherish-ball';
+import { CryogonalUNM } from './cryogonal-unm';
 import { FireCrystal } from './fire-crystal';
 import { GardevoirSylveonGXUNB } from './gardevoir-sylveon-gx-unb';
 import { GiantHearth } from './giant-hearth';
@@ -23,6 +24,7 @@ export const setSwordAndShield: Card[] = [
   new Charmander2(),
   new Charmeleon(),
   new CherishBall(),
+  new CryogonalUNM(),
   new FireCrystal(),
   new GardevoirSylveonGXUNB(),
   new GiantHearth(),
@@ -32,5 +34,5 @@ export const setSwordAndShield: Card[] = [
   new Oranguru(),
   new Rosa(),
   new Snorlax(),
-  new Welder()
+  new Welder(),
 ];
