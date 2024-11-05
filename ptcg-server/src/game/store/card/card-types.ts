@@ -9,8 +9,9 @@ export enum CardTag {
   POKEMON_VSTAR = 'VSTAR',
   POKEMON_EX_SV = 'EX (SV)',
   POKEMON_TERA = 'Tera',
+  POKEMON_ULTRA_BEAST = 'Ultra Beast',
   TAG_TEAM = 'TAG TEAM',
-  ACE_SPEC = 'ACE_SPEC'
+  ACE_SPEC = 'ACE SPEC'
 }
 
 export enum SuperType {

@@ -8,6 +8,7 @@ import { EeveeSCR } from './eevee-scr';
 import { EeveeEXPRE } from './eevee-ex-pre';
 import { ClemontsQuickWit } from './clemonts-quick-wit';
 import { JasminesGaze } from './jasmines-gaze';
+import { Drasna } from './drasna';
 
 export const setScarletAndViolet: Card[] = [
   new YveltalSFA(),
@@ -19,4 +20,5 @@ export const setScarletAndViolet: Card[] = [
   new GlaceonEXPRE(),
   new ClemontsQuickWit(),
   new JasminesGaze(),
+  new Drasna(),
 ];
