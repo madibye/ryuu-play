@@ -1,5 +1,6 @@
 import { Card } from '../../game/store/card/card';
 import { AbsolTEU } from './absol-teu';
+import { BlacephalonUNB } from './blacephalon-unb';
 import { Charizard } from './charizard';
 import { Charmander } from './charmander';
 import { Charmander2 } from './charmander2';
@@ -19,6 +20,7 @@ import { Welder } from './welder';
 
 export const setSwordAndShield: Card[] = [
   new AbsolTEU(),
+  new BlacephalonUNB(),
   new Charizard(),
   new Charmander(),
   new Charmander2(),
