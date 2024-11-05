@@ -335,6 +335,7 @@
     "INVALID_PROMPT_RESULT": "Invalid prompt result.",
     "INVALID_TARGET": "You can't play this card here.",
     "INVITATION_MESSAGE": "Player has invited you to a match. Choose your deck to accept the invitation.",
+    "LABEL_GX_USED": "You've already used your GX attack this game.",
     "MAX_PLAYERS_REACHED": "The match already has the maximum number of players.",
     "MOVE_DAMAGE": "Move damage counters.",
     "MOVE_ENERGY_CARDS": "Move energy cards.",

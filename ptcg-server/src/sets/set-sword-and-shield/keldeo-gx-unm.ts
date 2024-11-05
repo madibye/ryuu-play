@@ -1,4 +1,4 @@
-import { CardTag, CardType, PokemonCard, PowerType, Stage, State, StateUtils, StoreLike } from '../../game';
+import { CardTag, CardType, GameError, GameMessage, PokemonCard, PowerType, Stage, State, StateUtils, StoreLike } from '../../game';
 import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects';
 import { AbstractAttackEffect } from '../../game/store/effects/attack-effects';
@@ -67,7 +67,14 @@ export class KeldeoGXUNM extends PokemonCard {
 
     // Resolute Blade-GX
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
-      effect.opponent.bench.forEach(_p => effect.damage += 50);
+      const player = effect.player;
+      const opponent = effect.opponent;
+      if (player.usedGX == true) { 
+        throw new GameError(GameMessage.LABEL_GX_USED); 
+      }
+      player.usedGX = true;
+      opponent.bench.forEach(_p => effect.damage += 50);
+      player.usedGX = true;
     }
 
     return state;

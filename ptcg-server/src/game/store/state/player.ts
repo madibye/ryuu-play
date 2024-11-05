@@ -34,6 +34,8 @@ export class Player {
 
   stadiumUsedTurn: number = 0;
 
+  usedGX: boolean = false;
+
   marker = new Marker();
 
   avatarName: string = '';

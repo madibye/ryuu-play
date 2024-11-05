@@ -5,6 +5,7 @@ import { Charmander } from './charmander';
 import { Charmander2 } from './charmander2';
 import { Charmeleon } from './charmeleon';
 import { FireCrystal } from './fire-crystal';
+import { GardevoirSylveonGXUNB } from './gardevoir-sylveon-gx-unb';
 import { GiantHearth } from './giant-hearth';
 import { KeldeoGXUNM } from './keldeo-gx-unm';
 import { Leon } from './leon';
@@ -20,6 +21,7 @@ export const setSwordAndShield: Card[] = [
   new Charmander2(),
   new Charmeleon(),
   new FireCrystal(),
+  new GardevoirSylveonGXUNB(),
   new GiantHearth(),
   new KeldeoGXUNM(),
   new Leon(),
