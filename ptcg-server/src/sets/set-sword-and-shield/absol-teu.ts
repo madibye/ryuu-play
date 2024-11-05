@@ -1,8 +1,7 @@
-import { CardType, PokemonCard, PowerType, Stage, State, StateUtils, StoreLike } from '../../game';
+import { CardType, PlayerType, PokemonCard, PowerType, Stage, State, StateUtils, StoreLike } from '../../game';
 import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects';
 import { CheckRetreatCostEffect } from '../../game/store/effects/check-effects';
-import { EndTurnEffect } from '../../game/store/effects/game-phase-effects';
 
 export class AbsolTEU extends PokemonCard {
   public stage: Stage = Stage.BASIC;
@@ -27,7 +26,6 @@ export class AbsolTEU extends PokemonCard {
       text: 'This attack does 30 more damage for each C in your opponent\'s Active Pokemon\'s Retreat Cost.'
     },
   ];
-  public DARK_AMBITION_MARKER = 'DARK_AMBITION_MARKER';
   
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Dark Ambition: +1 retreat cost for your opponent's Active Basic Pokemon
@@ -35,10 +33,11 @@ export class AbsolTEU extends PokemonCard {
       const opponent = effect.player;
       const cardList = StateUtils.findCardList(state, this);
       const player = StateUtils.findOwner(state, cardList);
-      const oppActiveCard: PokemonCard | undefined = opponent.active.getPokemonCard();
-      if (opponent == player) { return state; }  // Make sure we're only operating on our opponent's active
-      if (oppActiveCard == undefined) { return state; }
-      if (opponent.marker.hasMarker(this.DARK_AMBITION_MARKER, oppActiveCard)) { return state; }  // Make sure we're not activating multiple times a turn
+      let inPlay: boolean = false;
+
+      player.forEachPokemon(PlayerType.BOTTOM_PLAYER, (cardList, card) => { if (card === this) { inPlay = true; } });
+      if (opponent === player) { return state; }  // Make sure we're only operating on our opponent 
+      if (!inPlay) { return state; }  // and only if this card is actually in play
       
       // Try to reduce PowerEffect, to check if something is blocking our ability
       try {
@@ -46,7 +45,6 @@ export class AbsolTEU extends PokemonCard {
         store.reduceEffect(state, powerEffect);
       } catch { return state; }
       // If we're all good, add a C to the retreat cost
-      opponent.marker.addMarker(this.DARK_AMBITION_MARKER, oppActiveCard);
       effect.cost = effect.cost.concat([ CardType.COLORLESS ]);
     }
 
@@ -55,10 +53,6 @@ export class AbsolTEU extends PokemonCard {
       const checkRetreatCost = new CheckRetreatCostEffect(effect.opponent);
       state = store.reduceEffect(state, checkRetreatCost);
       effect.damage += (30 * checkRetreatCost.cost.length);
-    }
-
-    if (effect instanceof EndTurnEffect) {
-      StateUtils.getOpponent(state, effect.player).marker.removeMarker(this.DARK_AMBITION_MARKER);
     }
 
     return state;
