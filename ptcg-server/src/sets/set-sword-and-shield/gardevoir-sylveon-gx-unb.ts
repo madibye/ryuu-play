@@ -5,7 +5,7 @@ import { CheckProvidedEnergyEffect } from '../../game/store/effects/check-effect
 
 
 export class GardevoirSylveonGXUNB extends PokemonCard {
-  public tags = [ CardTag.POKEMON_TAG_TEAM_GX ];
+  public tags = [ CardTag.POKEMON_GX, CardTag.TAG_TEAM ];
   public stage: Stage = Stage.BASIC;
   public cardType: CardType = CardType.FAIRY;
   public hp: number = 260;
@@ -18,20 +18,20 @@ export class GardevoirSylveonGXUNB extends PokemonCard {
   public attacks = [
     {
       name: 'Fairy Song',
-      cost: [],  // [ CardType.COLORLESS ],
+      cost: [ CardType.COLORLESS ],
       damage: 0,
       text: 'Search your deck for up to 2 Y Energy cards and attach them to your Benched Pokemon in any ' +
       'way you like. Then, shuffle your deck.'
     },
     {
       name: 'Kaleidostorm',
-      cost: [],  // [ CardType.FAIRY, CardType.FAIRY, CardType.COLORLESS ],
+      cost: [ CardType.FAIRY, CardType.FAIRY, CardType.COLORLESS ],
       damage: 150,
       text: 'Move any number of Energy from your Pokemon to your other Pokemon in any way you like.'
     },
     {
       name: 'Magical Miracle-GX',
-      cost: [],  // [ CardType.FAIRY, CardType.FAIRY, CardType.FAIRY ],
+      cost: [ CardType.FAIRY, CardType.FAIRY, CardType.FAIRY ],
       damage: 200,
       text: 'If this Pokemon has at least 3 extra Y Energy attached to it (in addition to this attack\'s cost), ' +
       'your opponent shuffles their hand into their deck. (You can\'t use more than 1 GX attack in a game.)'
@@ -96,7 +96,7 @@ export class GardevoirSylveonGXUNB extends PokemonCard {
       }
       player.usedGX = true;
 
-      const extraEffectCost: CardType[] = [];  // [ CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY ];
+      const extraEffectCost: CardType[] = [ CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY, CardType.FAIRY ];
       const checkProvidedEnergy = new CheckProvidedEnergyEffect(player);
       store.reduceEffect(state, checkProvidedEnergy);
       const meetsExtraEffectCost = StateUtils.checkEnoughEnergy(checkProvidedEnergy.energyMap, extraEffectCost);

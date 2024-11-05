@@ -44,8 +44,7 @@ export class KeldeoGXUNM extends PokemonCard {
 
       if (sourceCard && 
         (sourceCard.tags.includes(CardTag.POKEMON_EX) || 
-         sourceCard.tags.includes(CardTag.POKEMON_GX) || 
-         sourceCard.tags.includes(CardTag.POKEMON_TAG_TEAM_GX))) {
+         sourceCard.tags.includes(CardTag.POKEMON_GX))) {
         try {
           const player = StateUtils.findOwner(state, effect.target);
           const powerEffect = new PowerEffect(player, this.powers[0], this);

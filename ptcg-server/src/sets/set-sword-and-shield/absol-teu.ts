@@ -21,7 +21,7 @@ export class AbsolTEU extends PokemonCard {
   public attacks = [
     {
       name: 'Shadow Seeker',
-      cost: [],  // [ CardType.DARK, CardType.COLORLESS, CardType.COLORLESS ],
+      cost: [ CardType.DARK, CardType.COLORLESS, CardType.COLORLESS ],
       damage: 30,
       text: 'This attack does 30 more damage for each C in your opponent\'s Active Pokemon\'s Retreat Cost.'
     },

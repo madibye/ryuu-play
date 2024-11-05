@@ -4,12 +4,12 @@ export enum CardTag {
   POKEMON_SP = 'SP',
   POKEMON_EX = 'EX',
   POKEMON_GX = 'GX',
-  POKEMON_TAG_TEAM_GX = 'TAG TEAM GX',
   POKEMON_V = 'V',
   POKEMON_VMAX = 'VMAX',
   POKEMON_VSTAR = 'VSTAR',
   POKEMON_EX_SV = 'EX (SV)',
   POKEMON_TERA = 'Tera',
+  TAG_TEAM = 'TAG TEAM',
   ACE_SPEC = 'ACE_SPEC'
 }
 
