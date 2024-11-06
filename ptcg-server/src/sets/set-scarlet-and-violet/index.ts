@@ -25,6 +25,10 @@ import { Tinkatonex } from './Tinkaton ex';
 import { Umbreonex } from './Umbreon ex';
 import { Vaporeonex } from './Vaporeon ex';
 import { FezandipitiTWM } from './TWM Fezandipiti';
+import { Garganaclex } from './Garganacl ex';
+import { RowletOBF } from './OBF Rowlet';
+import { DartrixOBF } from './OBF Dartrix';
+import { Decidueyeex } from './Decidueye ex';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -53,4 +57,8 @@ export const setScarletAndViolet: Card[] = [
   new Umbreonex(),
   new Vaporeonex(),
   new FezandipitiTWM(),
+  new Garganaclex(),
+  new RowletOBF(),
+  new DartrixOBF(),
+  new Decidueyeex(),
 ];
