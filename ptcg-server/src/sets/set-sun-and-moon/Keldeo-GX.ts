@@ -4,19 +4,19 @@ import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects
 import { AbstractAttackEffect } from '../../game/store/effects/attack-effects';
 
 export class KeldeoGXUNM extends PokemonCard {
-  public tags = [ CardTag.POKEMON_GX ];
+  public tags = [CardTag.POKEMON_GX];
   public stage: Stage = Stage.BASIC;
   public cardType: CardType = CardType.WATER;
   public hp: number = 170;
   public weakness = [{ type: CardType.GRASS }];
-  public retreat = [ CardType.COLORLESS, CardType.COLORLESS ];
-  public set = 'SSH';
+  public retreat = [CardType.COLORLESS, CardType.COLORLESS];
+  public set = 'SUM';
   public name = 'Keldeo-GX';
   public fullName = 'Keldeo-GX UNM';
   public powers = [{
     name: 'Pure Heart',
     powerType: PowerType.ABILITY,
-    text: 'Prevent all effects of attacks, including damage, done to this Pokemon ' + 
+    text: 'Prevent all effects of attacks, including damage, done to this Pokemon ' +
       'by your opponent\'s Pokemon-GX or Pokemon-EX.'
   }];
   public attacks = [
@@ -30,11 +30,11 @@ export class KeldeoGXUNM extends PokemonCard {
       name: 'Resolute Blade-GX',
       cost: [], // [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
       damage: 0,
-      text: 'This attack does 50 damage for each of your opponent\'s Benched Pokemon. ' + 
-      '(You can\'t use more than 1 GX attack in a game.)'
+      text: 'This attack does 50 damage for each of your opponent\'s Benched Pokemon. ' +
+        '(You can\'t use more than 1 GX attack in a game.)'
     },
   ];
-  
+
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Pure Heart: Prevent damage & effects from Pokemon-EX
     if (effect instanceof AbstractAttackEffect && effect.target.cards.includes(this)) {
@@ -42,9 +42,9 @@ export class KeldeoGXUNM extends PokemonCard {
       const sourceCard = effect.source.getPokemonCard();
       if (pokemonCard !== this) { return state; }
 
-      if (sourceCard && 
-        (sourceCard.tags.includes(CardTag.POKEMON_EX) || 
-         sourceCard.tags.includes(CardTag.POKEMON_GX))) {
+      if (sourceCard &&
+        (sourceCard.tags.includes(CardTag.POKEMON_EX) ||
+          sourceCard.tags.includes(CardTag.POKEMON_GX))) {
         try {
           const player = StateUtils.findOwner(state, effect.target);
           const powerEffect = new PowerEffect(player, this.powers[0], this);

@@ -22,7 +22,7 @@ export class Buzzwole extends PokemonCard {
     { name: 'Swing Around', cost: [CardType.FIGHTING, CardType.FIGHTING, CardType.COLORLESS], damage: 80, text: 'Flip 2 coins. This attack does 20 more damage for each heads.' }
   ];
 
-  public set: string = 'FLI';
+  public set: string = 'SUM';
 
   public name: string = 'Buzzwole';
 

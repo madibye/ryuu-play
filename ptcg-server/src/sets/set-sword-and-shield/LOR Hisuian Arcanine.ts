@@ -37,7 +37,7 @@ export class HisuianArcanine extends PokemonCard {
     }
   ];
 
-  public set: string = 'LOR';
+  public set: string = 'SSH';
 
   public name: string = 'Hisuian Arcanine';
 

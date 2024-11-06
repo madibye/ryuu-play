@@ -39,7 +39,7 @@ export class AlolanNinetalesGX extends PokemonCard {
       text: 'If your opponent\'s Active Pokémon is an Ultra Beast, it is Knocked Out. (You can\'t use more than 1 GX attack in a game.)'
     }
   ];
-  public set: string = 'LOT';
+  public set: string = 'SUM';
   public name: string = 'Alolan Ninetales-GX';
   public fullName: string = 'Alolan Ninetales-GX LOT';
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {

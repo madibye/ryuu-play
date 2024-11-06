@@ -35,11 +35,11 @@ export class Espeonex extends PokemonCard {
       text: 'Devolve each of your opponent’s evolved Pokémon by shuffling the highest Stage Evolution card on it into your opponent’s deck.' }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Espeon ex';
 
-  public fullName: string = 'Espeon ex SV8a';
+  public fullName: string = 'Espeon ex PRE';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Psych Out

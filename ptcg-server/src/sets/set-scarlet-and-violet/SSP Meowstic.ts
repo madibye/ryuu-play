@@ -39,7 +39,7 @@ export class Meowstic extends PokemonCard {
     }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Meowstic';
 

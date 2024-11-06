@@ -28,7 +28,7 @@ export class BuzzwoleGX extends PokemonCard {
     { name: 'Absorption-GX', cost: [CardType.FIGHTING, CardType.FIGHTING, CardType.FIGHTING], damage: 0, text: 'This attack does 40 damage for each of your remaining Prize cards. (You can\'t use more than 1 GX attack in a game.)' }
   ];
 
-  public set: string = 'CIN';
+  public set: string = 'SUM';
 
   public name: string = 'Buzzwole-GX';
 

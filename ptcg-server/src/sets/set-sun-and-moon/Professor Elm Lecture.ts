@@ -59,7 +59,7 @@ export class ProfessorElmLecture extends TrainerCard {
 
   public trainerType: TrainerType = TrainerType.SUPPORTER;
 
-  public set: string = 'LOT';
+  public set: string = 'SUM';
 
   public name: string = 'Professor Elm\'s Lecture';
 

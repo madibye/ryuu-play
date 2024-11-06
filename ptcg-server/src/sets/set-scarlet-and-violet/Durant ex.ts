@@ -35,11 +35,11 @@ export class DurantEx extends PokemonCard {
     }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Durant ex';
 
-  public fullName: string = 'Durant ex SV8a';
+  public fullName: string = 'Durant ex SSP';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {    
     // Sudden Scrape

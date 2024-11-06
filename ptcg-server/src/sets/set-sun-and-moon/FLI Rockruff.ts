@@ -24,7 +24,7 @@ export class Rockruff extends PokemonCard {
       text: 'Flip a coin. If tails, this attack does nothing.' }
   ];
 
-  public set: string = 'FLI';
+  public set: string = 'SUM';
 
   public name: string = 'Rockruff';
 

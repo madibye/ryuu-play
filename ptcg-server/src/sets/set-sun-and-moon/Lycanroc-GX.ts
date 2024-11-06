@@ -46,7 +46,7 @@ export class LycanrocGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'GRI';
+  public set: string = 'SUM';
 
   public name: string = 'Lycanroc-GX';
 

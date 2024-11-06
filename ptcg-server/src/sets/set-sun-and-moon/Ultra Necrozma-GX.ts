@@ -39,7 +39,7 @@ export class UltraNecrozmaGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'FLI';
+  public set: string = 'SUM';
 
   public name: string = 'Ultra Necrozma-GX';
 

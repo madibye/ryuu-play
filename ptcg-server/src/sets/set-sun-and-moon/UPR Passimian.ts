@@ -33,7 +33,7 @@ export class PassimianUPR extends PokemonCard {
     text: 'This attack\'s damage isn\'t affected by Resistance.'
   }];
 
-  public set: string = 'UPR';
+  public set: string = 'SUM';
 
   public name: string = 'Passimian';
 

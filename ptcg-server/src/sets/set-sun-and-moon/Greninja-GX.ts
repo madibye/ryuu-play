@@ -48,7 +48,7 @@ export class GreninjaGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'FLI';
+  public set: string = 'SUM';
 
   public name: string = 'Greninja-GX';
 

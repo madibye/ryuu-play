@@ -11,7 +11,7 @@ import { AttackEffect } from '../../game/store/effects/game-effects';
 
 export class Umbreonex extends PokemonCard {
 
-  public tags = [ CardTag.POKEMON_ex, CardTag.POKEMON_TERA ];
+  public tags = [CardTag.POKEMON_ex, CardTag.POKEMON_TERA];
 
   public stage: Stage = Stage.STAGE_1;
 
@@ -23,26 +23,28 @@ export class Umbreonex extends PokemonCard {
 
   public weakness = [{ type: CardType.GRASS }];
 
-  public retreat = [ CardType.COLORLESS, CardType.COLORLESS ];
+  public retreat = [CardType.COLORLESS, CardType.COLORLESS];
 
   public attacks = [
-    { 
-      name: 'Moon Mirage', 
-      cost: [CardType.DARK, CardType.COLORLESS, CardType.COLORLESS], 
+    {
+      name: 'Moon Mirage',
+      cost: [CardType.DARK, CardType.COLORLESS, CardType.COLORLESS],
       damage: 160,
-      text: 'Your opponent’s Active Pokémon is now Confused.' },
-    { 
-      name: 'Euclase', 
-      cost: [CardType.LIGHTNING, CardType.PSYCHIC, CardType.DARK], 
-      damage: 0, 
-      text: 'Discard all Energy from this Pokémon. Draw 1 Prize card.' }
+      text: 'Your opponent’s Active Pokémon is now Confused.'
+    },
+    {
+      name: 'Euclase',
+      cost: [CardType.LIGHTNING, CardType.PSYCHIC, CardType.DARK],
+      damage: 0,
+      text: 'Discard all Energy from this Pokémon. Draw 1 Prize card.'
+    }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Umbreon ex';
 
-  public fullName: string = 'Umbreon ex SV8a';
+  public fullName: string = 'Umbreon ex PRE';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Moon Mirage
@@ -52,17 +54,17 @@ export class Umbreonex extends PokemonCard {
     }
 
     // Euclase
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]){
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       const player = effect.player;
 
       const checkProvidedEnergy = new CheckProvidedEnergyEffect(player);
       state = store.reduceEffect(state, checkProvidedEnergy);
-  
+
       const cards: Card[] = [];
       checkProvidedEnergy.energyMap.forEach(em => {
         cards.push(em.card);
       });
-    
+
       const discardEnergy = new DiscardCardsEffect(effect, cards);
       discardEnergy.target = player.active;
       store.reduceEffect(state, discardEnergy);

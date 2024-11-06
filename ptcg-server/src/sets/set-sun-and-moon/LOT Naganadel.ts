@@ -41,7 +41,7 @@ export class Naganadel extends PokemonCard {
     },
   ];
 
-  public set: string = 'LOT';
+  public set: string = 'SUM';
 
   public name: string = 'Naganadel';
 

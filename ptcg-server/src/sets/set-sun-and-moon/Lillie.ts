@@ -11,7 +11,7 @@ export class Lillie extends TrainerCard {
 
   public trainerType: TrainerType = TrainerType.SUPPORTER;
 
-  public set: string = 'UPR';
+  public set: string = 'SUM';
 
   public name: string = 'Lillie';
 

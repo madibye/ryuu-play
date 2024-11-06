@@ -36,7 +36,7 @@ export class Espurr extends PokemonCard {
     },
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Espurr';
 

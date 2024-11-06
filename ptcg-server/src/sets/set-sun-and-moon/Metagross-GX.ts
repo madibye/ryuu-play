@@ -77,7 +77,7 @@ export class MetagrossGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'GRI';
+  public set: string = 'SUM';
 
   public name: string = 'Metagross-GX';
 

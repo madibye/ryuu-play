@@ -23,7 +23,7 @@ export class Natu extends PokemonCard {
     { name: 'Me First', cost: [ CardType.COLORLESS ], damage: 0, text: 'Draw a card.' }
   ];
 
-  public set: string = 'RCL';
+  public set: string = 'SSH';
 
   public name: string = 'Natu';
 

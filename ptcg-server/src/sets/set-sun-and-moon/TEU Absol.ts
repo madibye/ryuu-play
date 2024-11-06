@@ -9,8 +9,8 @@ export class AbsolTEU extends PokemonCard {
   public hp: number = 100;
   public weakness = [{ type: CardType.FIGHTING }];
   public resistance = [{ type: CardType.PSYCHIC, value: -20 }];
-  public retreat = [ CardType.COLORLESS ];
-  public set = 'SSH';
+  public retreat = [CardType.COLORLESS];
+  public set = 'SUM';
   public name = 'Absol';
   public fullName = 'Absol TEU';
   public powers = [{
@@ -21,12 +21,12 @@ export class AbsolTEU extends PokemonCard {
   public attacks = [
     {
       name: 'Shadow Seeker',
-      cost: [ CardType.DARK, CardType.COLORLESS, CardType.COLORLESS ],
+      cost: [CardType.DARK, CardType.COLORLESS, CardType.COLORLESS],
       damage: 30,
       text: 'This attack does 30 more damage for each C in your opponent\'s Active Pokemon\'s Retreat Cost.'
     },
   ];
-  
+
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Dark Ambition: +1 retreat cost for your opponent's Active Basic Pokemon
     if (effect instanceof CheckRetreatCostEffect && effect.player.active.getPokemonCard()?.stage == Stage.BASIC) {
@@ -38,14 +38,14 @@ export class AbsolTEU extends PokemonCard {
       player.forEachPokemon(PlayerType.BOTTOM_PLAYER, (cardList, card) => { if (card === this) { inPlay = true; } });
       if (opponent === player) { return state; }  // Make sure we're only operating on our opponent 
       if (!inPlay) { return state; }  // and only if this card is actually in play
-      
+
       // Try to reduce PowerEffect, to check if something is blocking our ability
       try {
         const powerEffect = new PowerEffect(player, this.powers[0], this);
         store.reduceEffect(state, powerEffect);
       } catch { return state; }
       // If we're all good, add a C to the retreat cost
-      effect.cost = effect.cost.concat([ CardType.COLORLESS ]);
+      effect.cost = effect.cost.concat([CardType.COLORLESS]);
     }
 
     // Shadow Seeker

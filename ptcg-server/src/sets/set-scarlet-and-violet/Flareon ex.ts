@@ -84,11 +84,11 @@ export class Flareonex extends PokemonCard {
       text: 'During your next turn, this Pokemon can’t attack.' }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Flareon ex';
 
-  public fullName: string = 'Flareon ex SV8a';
+  public fullName: string = 'Flareon ex PRE';
 
   // for preventing the pokemon from attacking on the next turn
   public readonly ATTACK_USED_MARKER = 'ATTACK_USED_MARKER';

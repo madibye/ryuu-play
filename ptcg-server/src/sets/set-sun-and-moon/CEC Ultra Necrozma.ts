@@ -31,7 +31,7 @@ export class Ultra_Necrozma extends PokemonCard {
     { name: 'Luster of Downfall', cost: [CardType.PSYCHIC, CardType.METAL], damage: 170, text: 'Discard an Energy from your opponent\'s Active Pokémon.' }
   ];
 
-  public set: string = 'CEC';
+  public set: string = 'SUM';
 
   public name: string = 'Ultra Necrozma';
 

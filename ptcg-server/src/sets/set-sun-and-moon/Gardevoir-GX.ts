@@ -77,7 +77,7 @@ export class GardevoirGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'BUS';
+  public set: string = 'SUM';
 
   public name: string = 'Gardevoir-GX';
 

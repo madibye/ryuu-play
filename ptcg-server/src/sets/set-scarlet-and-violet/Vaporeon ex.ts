@@ -10,7 +10,7 @@ import { AttackEffect } from '../../game/store/effects/game-effects';
 
 export class Vaporeonex extends PokemonCard {
 
-  public tags = [ CardTag.POKEMON_ex, CardTag.POKEMON_TERA ];
+  public tags = [CardTag.POKEMON_ex, CardTag.POKEMON_TERA];
 
   public stage: Stage = Stage.STAGE_1;
 
@@ -22,26 +22,28 @@ export class Vaporeonex extends PokemonCard {
 
   public weakness = [{ type: CardType.LIGHTNING }];
 
-  public retreat = [ CardType.COLORLESS, CardType.COLORLESS ];
+  public retreat = [CardType.COLORLESS, CardType.COLORLESS];
 
   public attacks = [
-    { 
-      name: 'Heavy Squall', 
-      cost: [CardType.WATER, CardType.COLORLESS], 
-      damage: 0, 
-      text: 'This attack does 60 damage to each of your opponent’s Pokémon ex. Don’t apply Weakness and Resistance for this damage.' },
-    { 
-      name: 'Aquamarine', 
-      cost: [CardType.FIRE, CardType.WATER, CardType.LIGHTNING], 
-      damage: 280, 
-      text: 'During your next turn, this Pokemon can’t attack.' }
+    {
+      name: 'Heavy Squall',
+      cost: [CardType.WATER, CardType.COLORLESS],
+      damage: 0,
+      text: 'This attack does 60 damage to each of your opponent’s Pokémon ex. Don’t apply Weakness and Resistance for this damage.'
+    },
+    {
+      name: 'Aquamarine',
+      cost: [CardType.FIRE, CardType.WATER, CardType.LIGHTNING],
+      damage: 280,
+      text: 'During your next turn, this Pokemon can’t attack.'
+    }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Vaporeon ex';
 
-  public fullName: string = 'Vaporeon ex SV8a';
+  public fullName: string = 'Vaporeon ex PRE';
 
   // for preventing the pokemon from attacking on the next turn
   public readonly ATTACK_USED_MARKER = 'ATTACK_USED_MARKER';
@@ -67,7 +69,7 @@ export class Vaporeonex extends PokemonCard {
     }
 
     // Carnelian
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]){
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       // Check marker
       if (effect.player.marker.hasMarker(this.ATTACK_USED_MARKER, this)) {
         throw new GameError(GameMessage.BLOCKED_BY_EFFECT);

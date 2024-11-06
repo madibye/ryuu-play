@@ -10,7 +10,7 @@ export class ChoiceBand extends TrainerCard {
 
   public trainerType: TrainerType = TrainerType.TOOL;
 
-  public set: string = 'GRI';
+  public set: string = 'SUM';
 
   public name: string = 'Choice Band';
 

@@ -35,11 +35,11 @@ export class EeveeEx extends PokemonCard {
     }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Eevee ex';
 
-  public fullName: string = 'Eevee ex SV8a';
+  public fullName: string = 'Eevee ex PRE';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {    
     // Rainbow DNA

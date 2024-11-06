@@ -46,7 +46,7 @@ export class RayquazaGX extends PokemonCard {
     }
   ];
 
-  public set: string = 'CES';
+  public set: string = 'SUM';
 
   public name: string = 'Rayquaza-GX';
 

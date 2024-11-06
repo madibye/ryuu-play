@@ -5,12 +5,12 @@ import { PutCountersEffect } from '../../game/store/effects/attack-effects';
 import { Effect } from '../../game/store/effects/effect';
 import { PlayerType } from '../../game';
 import { AttackEffect } from '../../game/store/effects/game-effects';
-import {EndTurnEffect} from '../../game/store/effects/game-phase-effects';
-import {CheckRetreatCostEffect} from '../../game/store/effects/check-effects';
+import { EndTurnEffect } from '../../game/store/effects/game-phase-effects';
+import { CheckRetreatCostEffect } from '../../game/store/effects/check-effects';
 
 export class Palossandex extends PokemonCard {
 
-  public tags = [ CardTag.POKEMON_ex, CardTag.POKEMON_TERA ];
+  public tags = [CardTag.POKEMON_ex, CardTag.POKEMON_TERA];
 
   public stage: Stage = Stage.STAGE_1;
 
@@ -24,26 +24,28 @@ export class Palossandex extends PokemonCard {
 
   public resistance = [{ type: CardType.FIGHTING, value: -30 }];
 
-  public retreat = [ CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS ];
+  public retreat = [CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS];
 
   public attacks = [
-    { 
-      name: 'Sand Tomb', 
-      cost: [CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS], 
+    {
+      name: 'Sand Tomb',
+      cost: [CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS],
       damage: 160,
-      text: 'During your opponent\'s next turn, the Defending Pokémon can\'t retreat.' },
-    { 
-      name: 'Barite Jail', 
-      cost: [CardType.WATER, CardType.PSYCHIC, CardType.FIGHTING], 
-      damage: 0, 
-      text: 'Put damage counters on each of your opponent\'s Benched Pokémon until its remaining HP is 100.' }
+      text: 'During your opponent\'s next turn, the Defending Pokémon can\'t retreat.'
+    },
+    {
+      name: 'Barite Jail',
+      cost: [CardType.WATER, CardType.PSYCHIC, CardType.FIGHTING],
+      damage: 0,
+      text: 'Put damage counters on each of your opponent\'s Benched Pokémon until its remaining HP is 100.'
+    }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Palossand ex';
 
-  public fullName: string = 'Palossand ex SV8a';
+  public fullName: string = 'Palossand ex SSP';
 
   public readonly SAND_TOMB_MARKER = 'SAND_TOMB_MARKER';
 
@@ -64,14 +66,14 @@ export class Palossandex extends PokemonCard {
     }
 
     // Barite Jail
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]){
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       const player = effect.player;
       const opponent = StateUtils.getOpponent(state, player);
-  
+
       opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList, card) => {
         let resultingDamage = (card.hp - cardList.damage) - 100;
         // just making sure nothing weird happens
-        if (resultingDamage <= 0 ){ resultingDamage = 0; }
+        if (resultingDamage <= 0) { resultingDamage = 0; }
 
         const damageEffect = new PutCountersEffect(effect, resultingDamage);
         damageEffect.target = cardList;

@@ -67,7 +67,7 @@ export class ChillTeaserToy extends TrainerCard {
 
   public trainerType: TrainerType = TrainerType.ITEM;
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Chill Teaser Toy';
 

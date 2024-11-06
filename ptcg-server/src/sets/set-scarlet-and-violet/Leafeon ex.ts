@@ -37,11 +37,11 @@ export class Leafeonex extends PokemonCard {
       text: 'Heal 100 damage from each of your Benched Pokemon.' }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Leafeon ex';
 
-  public fullName: string = 'Leafeon ex SV8a';
+  public fullName: string = 'Leafeon ex PRE';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Psybeam

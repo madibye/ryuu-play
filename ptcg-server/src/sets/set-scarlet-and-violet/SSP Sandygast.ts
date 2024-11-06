@@ -19,7 +19,7 @@ export class Sandygast extends PokemonCard {
     { name: 'Sand Spray', cost: [CardType.COLORLESS, CardType.COLORLESS, CardType.COLORLESS], damage: 50, text: '' }
   ];
 
-  public set: string = 'SSH';
+  public set: string = 'SVI';
 
   public name: string = 'Sandygast';
 

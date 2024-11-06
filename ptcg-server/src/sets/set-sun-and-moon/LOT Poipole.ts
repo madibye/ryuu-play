@@ -63,7 +63,7 @@ export class Poipole extends PokemonCard {
     },
   ];
 
-  public set: string = 'LOT';
+  public set: string = 'SUM';
 
   public name: string = 'Poipole';
 
