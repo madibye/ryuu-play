@@ -61,6 +61,7 @@ import { UltraSpace } from './Ultra Space';
 import { UnownHAND } from './Unown HAND';
 import { PassimianUPR } from './UPR Passimian';
 import { TapuLele } from './UPR Tapu Lele';
+import { AlolanExeggutorFLI } from './FLI Alolan Exeggutor';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -125,4 +126,5 @@ export const setSunAndMoon: Card[] = [
   new KeldeoGXUNM(),
   new Rosa(),
   new Welder(),
+  new AlolanExeggutorFLI(),
 ];
