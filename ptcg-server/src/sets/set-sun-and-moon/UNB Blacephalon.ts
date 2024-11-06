@@ -4,7 +4,7 @@ import { AttackEffect } from '../../game/store/effects/game-effects';
 
 
 export class BlacephalonUNB extends PokemonCard {
-  public tags = [ CardTag.POKEMON_ULTRA_BEAST ];
+  public tags = [ CardTag.ULTRA_BEAST ];
   public stage: Stage = Stage.BASIC;
   public cardType: CardType = CardType.FIRE;
   public hp: number = 120;

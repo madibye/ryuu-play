@@ -15,7 +15,7 @@ export class Welder extends TrainerCard {
 
   public trainerType: TrainerType = TrainerType.SUPPORTER;
 
-  public set: string = 'SSH';
+  public set: string = 'SUM';
 
   public name: string = 'Welder';
 

@@ -7,9 +7,11 @@ export enum CardTag {
   POKEMON_V = 'V',
   POKEMON_VMAX = 'VMAX',
   POKEMON_VSTAR = 'VSTAR',
-  POKEMON_EX_SV = 'EX (SV)',
+  POKEMON_ex = 'ex',
   POKEMON_TERA = 'Tera',
-  POKEMON_ULTRA_BEAST = 'Ultra Beast',
+  FUTURE = 'Future',
+  ANCIENT = 'Ancient',
+  ULTRA_BEAST = 'Ultra Beast',
   TAG_TEAM = 'TAG TEAM',
   ACE_SPEC = 'ACE SPEC'
 }

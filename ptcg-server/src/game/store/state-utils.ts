@@ -104,6 +104,7 @@ export class StateUtils {
       cardLists.push(player.active);
       cardLists.push(player.deck);
       cardLists.push(player.discard);
+      cardLists.push(player.lostzone);
       cardLists.push(player.hand);
       cardLists.push(player.stadium);
       cardLists.push(player.supporter);
@@ -123,6 +124,7 @@ export class StateUtils {
       cardLists.push(player.active);
       cardLists.push(player.deck);
       cardLists.push(player.discard);
+      cardLists.push(player.lostzone);
       cardLists.push(player.hand);
       cardLists.push(player.stadium);
       cardLists.push(player.supporter);
