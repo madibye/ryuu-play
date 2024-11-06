@@ -24,6 +24,7 @@ import { ScovillainEXSSP } from './SSP Scovillain ex';
 import { Tinkatonex } from './Tinkaton ex';
 import { Umbreonex } from './Umbreon ex';
 import { Vaporeonex } from './Vaporeon ex';
+import { FezandipitiTWM } from './TWM Fezandipiti';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -51,4 +52,5 @@ export const setScarletAndViolet: Card[] = [
   new Tinkatonex(),
   new Umbreonex(),
   new Vaporeonex(),
+  new FezandipitiTWM(),
 ];

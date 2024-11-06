@@ -3,10 +3,12 @@ import { GameMessage } from '../../game-message';
 import { Effect } from '../effects/effect';
 import { State } from '../state/state';
 import { StoreLike } from '../store-like';
-import { PutDamageEffect, DealDamageEffect, DiscardCardsEffect,
+import {
+  PutDamageEffect, DealDamageEffect, DiscardCardsEffect,
   AddMarkerEffect, HealTargetEffect, AddSpecialConditionsEffect,
   RemoveSpecialConditionsEffect, ApplyWeaknessEffect, AfterDamageEffect,
-  PutCountersEffect } from '../effects/attack-effects';
+  PutCountersEffect
+} from '../effects/attack-effects';
 import { HealEffect } from '../effects/game-effects';
 import { StateUtils } from '../state-utils';
 
