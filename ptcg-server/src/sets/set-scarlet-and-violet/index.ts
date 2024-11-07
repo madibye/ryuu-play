@@ -8,7 +8,7 @@ import { EeveeSCR } from './SCR Eevee';
 import { EeveeEx } from './Eevee ex';
 import { ClemontsQuickWit } from './Clemonts Quick Wit';
 import { JasminesGaze } from './Jasmines Gaze';
-import { Drasna } from './Drasna';
+import { Drasna } from './drasna';
 import { ChillTeaserToy } from './Chill Teaser Toy';
 import { DurantEx } from './Durant ex';
 import { Espeonex } from './Espeon ex';
@@ -61,4 +61,5 @@ export const setScarletAndViolet: Card[] = [
   new RowletOBF(),
   new DartrixOBF(),
   new Decidueyeex(),
+  new Garganaclex(),
 ];

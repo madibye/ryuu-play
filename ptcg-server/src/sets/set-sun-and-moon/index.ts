@@ -63,6 +63,8 @@ import { PassimianUPR } from './UPR Passimian';
 import { TapuLele } from './UPR Tapu Lele';
 import { AlolanExeggutorFLI } from './FLI Alolan Exeggutor';
 import { VictiniPS } from './Victini PS';
+import { Fomantis } from './SUM Fomantis';
+import { LurantisGX } from './Lurantis-GX';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -129,4 +131,6 @@ export const setSunAndMoon: Card[] = [
   new Welder(),
   new AlolanExeggutorFLI(),
   new VictiniPS(),
+  new Fomantis(),
+  new LurantisGX(),
 ];

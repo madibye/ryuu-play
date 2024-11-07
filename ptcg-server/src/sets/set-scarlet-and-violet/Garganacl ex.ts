@@ -1,5 +1,5 @@
 import { PokemonCard } from '../../game/store/card/pokemon-card';
-import { Stage, CardType } from '../../game/store/card/card-types';
+import { Stage, CardType, CardTag } from '../../game/store/card/card-types';
 import { StoreLike, State, GamePhase, PowerType, StateUtils, PlayerType } from '../../game';
 import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects';
 import { Effect } from '../../game/store/effects/effect';
@@ -9,6 +9,8 @@ import { CheckTableStateEffect } from '../../game/store/effects/check-effects';
 
 // SCR Garganacl ex 89 (https://limitlesstcg.com/cards/SCR/89)
 export class Garganaclex extends PokemonCard {
+
+  public tags = [ CardTag.POKEMON_ex ];
 
   public stage: Stage = Stage.STAGE_2;
 
@@ -67,7 +69,7 @@ export class Garganaclex extends PokemonCard {
         // checking if the player's active has special conditions or if the active is Garganacl ex with the ability (i swear if they make another garganacl ex with the same ability name but with a different effect)
         if (player.active.specialConditions.length === 0 
           || (activeCard && activeCard.name !== 'Garganacl ex') 
-          || (activeCard && activeCard.powers[0].name !== 'Salty Body')) {
+          || (activeCard && activeCard.powers[0] !== this.powers[0])) {
           return state;
         }
 
