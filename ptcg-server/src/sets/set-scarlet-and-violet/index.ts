@@ -61,5 +61,4 @@ export const setScarletAndViolet: Card[] = [
   new RowletOBF(),
   new DartrixOBF(),
   new Decidueyeex(),
-  new Garganaclex(),
 ];

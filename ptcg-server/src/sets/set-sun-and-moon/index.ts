@@ -65,6 +65,8 @@ import { AlolanExeggutorFLI } from './FLI Alolan Exeggutor';
 import { VictiniPS } from './Victini PS';
 import { Fomantis } from './SUM Fomantis';
 import { LurantisGX } from './Lurantis-GX';
+import { Salandit } from './DRM Salandit';
+import { SalazzleGX } from './Salazzle-GX';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -133,4 +135,6 @@ export const setSunAndMoon: Card[] = [
   new VictiniPS(),
   new Fomantis(),
   new LurantisGX(),
+  new Salandit(),
+  new SalazzleGX(),
 ];
