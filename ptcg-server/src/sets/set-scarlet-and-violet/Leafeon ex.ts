@@ -10,7 +10,7 @@ import { AttackEffect } from '../../game/store/effects/game-effects';
 
 export class Leafeonex extends PokemonCard {
 
-  public tags = [ CardTag.POKEMON_ex, CardTag.POKEMON_TERA ];
+  public tags = [CardTag.POKEMON_ex, CardTag.POKEMON_TERA];
 
   public stage: Stage = Stage.STAGE_1;
 
@@ -22,19 +22,21 @@ export class Leafeonex extends PokemonCard {
 
   public weakness = [{ type: CardType.FIRE }];
 
-  public retreat = [ CardType.COLORLESS ];
+  public retreat = [CardType.COLORLESS];
 
   public attacks = [
-    { 
-      name: 'Leaf Typhoon', 
-      cost: [CardType.GRASS, CardType.COLORLESS], 
-      damage: 60, 
-      text: 'This attack foes 60 damage for each Energy attached to all of your opponent’s Pokémon.' },
-    { 
-      name: 'Moss Agate', 
-      cost: [CardType.GRASS, CardType.FIRE, CardType.WATER], 
-      damage: 230, 
-      text: 'Heal 100 damage from each of your Benched Pokemon.' }
+    {
+      name: 'Leaf Typhoon',
+      cost: [CardType.GRASS, CardType.COLORLESS],
+      damage: 60,
+      text: 'This attack does 60 damage for each Energy attached to all of your opponent’s Pokémon.'
+    },
+    {
+      name: 'Moss Agate',
+      cost: [CardType.GRASS, CardType.FIRE, CardType.WATER],
+      damage: 230,
+      text: 'Heal 100 damage from each of your Benched Pokemon.'
+    }
   ];
 
   public set: string = 'SVI';
@@ -51,7 +53,7 @@ export class Leafeonex extends PokemonCard {
 
       const checkProvidedEnergyEffect = new CheckProvidedEnergyEffect(player);
       store.reduceEffect(state, checkProvidedEnergyEffect);
-  
+
       let energies = 0;
       opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList, card) => {
         const checkProvidedEnergyEffect = new CheckProvidedEnergyEffect(player, cardList);
@@ -60,12 +62,12 @@ export class Leafeonex extends PokemonCard {
           energies++;
         });
       });
-  
+
       effect.damage = energies * 60;
     }
 
     // Psychic
-    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]){
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       const player = effect.player;
 
       player.forEachPokemon(PlayerType.TOP_PLAYER, (cardList, card) => {

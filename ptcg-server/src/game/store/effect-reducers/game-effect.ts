@@ -125,7 +125,7 @@ export function gameReducer(store: StoreLike, state: State, effect: Effect): Sta
 
 
       store.log(state, GameLog.LOG_POKEMON_KO, { name: card.name });
-      effect.target.moveTo(effect.player.discard);
+      effect.target.moveTo(card.tags.includes(CardTag.PRISM_STAR) ? effect.player.lostzone : effect.player.discard);
       effect.target.clearEffects();
     }
   }

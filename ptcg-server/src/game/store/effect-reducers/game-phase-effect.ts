@@ -3,7 +3,7 @@ import { EndTurnEffect, BetweenTurnsEffect } from '../effects/game-phase-effects
 import { GameError } from '../../game-error';
 import { GameMessage, GameLog } from '../../game-message';
 import { Player } from '../state/player';
-import { SpecialCondition } from '../card/card-types';
+import { CardTag, SpecialCondition } from '../card/card-types';
 import { State, GamePhase, GameWinner } from '../state/state';
 import { StoreLike } from '../store-like';
 import { checkState, endGame } from './check-effect';
@@ -77,7 +77,8 @@ function startNextTurn(store: StoreLike, state: State): State {
   player.active.removeSpecialCondition(SpecialCondition.PARALYZED);
 
   // Move supporter cards to discard
-  player.supporter.moveTo(player.discard);
+  const toLostZone: boolean = ((player.supporter.cards.length > 0) && (player.supporter.cards[0].tags.includes(CardTag.PRISM_STAR)));
+  player.supporter.moveTo(toLostZone ? player.lostzone : player.discard);
 
   return betweenTurns(store, state, () => {
     if (state.phase !== GamePhase.FINISHED) {

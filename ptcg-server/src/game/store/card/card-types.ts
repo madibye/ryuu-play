@@ -13,7 +13,8 @@ export enum CardTag {
   ANCIENT = 'Ancient',
   ULTRA_BEAST = 'Ultra Beast',
   TAG_TEAM = 'TAG TEAM',
-  ACE_SPEC = 'ACE SPEC'
+  ACE_SPEC = 'ACE SPEC',
+  PRISM_STAR = 'Prism Star',
 }
 
 export enum SuperType {

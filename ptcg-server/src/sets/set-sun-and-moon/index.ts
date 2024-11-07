@@ -62,6 +62,7 @@ import { UnownHAND } from './Unown HAND';
 import { PassimianUPR } from './UPR Passimian';
 import { TapuLele } from './UPR Tapu Lele';
 import { AlolanExeggutorFLI } from './FLI Alolan Exeggutor';
+import { VictiniPS } from './Victini PS';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -127,4 +128,5 @@ export const setSunAndMoon: Card[] = [
   new Rosa(),
   new Welder(),
   new AlolanExeggutorFLI(),
+  new VictiniPS(),
 ];
