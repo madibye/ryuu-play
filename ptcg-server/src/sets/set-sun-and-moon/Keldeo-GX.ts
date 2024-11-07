@@ -22,13 +22,13 @@ export class KeldeoGXUNM extends PokemonCard {
   public attacks = [
     {
       name: 'Sonic Edge',
-      cost: [], // [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
+      cost: [CardType.WATER, CardType.WATER, CardType.COLORLESS],
       damage: 110,
       text: 'This attack\'s damage isn\'t affected by any effects on your opponent\'s Active Pokemon.'
     },
     {
       name: 'Resolute Blade-GX',
-      cost: [], // [ CardType.WATER, CardType.WATER, CardType.COLORLESS ],
+      cost: [CardType.WATER, CardType.WATER, CardType.COLORLESS],
       damage: 0,
       text: 'This attack does 50 damage for each of your opponent\'s Benched Pokemon. ' +
         '(You can\'t use more than 1 GX attack in a game.)'

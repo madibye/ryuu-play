@@ -8,6 +8,11 @@ import { Oranguru } from './SSH Oranguru';
 import { Snorlax } from './VIV Snorlax';
 import { HisuianArcanine } from './LOR Hisuian Arcanine';
 import { Natu } from './RCL Natu';
+import { RowletDAA } from './DAA Rowlet';
+import { BirdKeeper } from './Bird Keeper';
+import { DucklettDAA } from './DAA Ducklett';
+import { SwannaDAA } from './DAA Swanna';
+import { StarlyDAA } from './DAA Starly';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -19,4 +24,9 @@ export const setSwordAndShield: Card[] = [
   new Snorlax(),
   new HisuianArcanine(),
   new Natu(),
+  new BirdKeeper(),
+  new RowletDAA(),
+  new StarlyDAA(),
+  new DucklettDAA(),
+  new SwannaDAA(),
 ];
