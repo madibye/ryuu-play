@@ -51,10 +51,8 @@ export class BeedrillTEU extends PokemonCard {
 
       // Knock out both active Pokemon.
       const selfKOEffect = new KnockOutEffect(opponent, player.active);
-      selfKOEffect.target = player.active;
       store.reduceEffect(state, selfKOEffect);
       const oppKOEffect = new KnockOutEffect(player, opponent.active);
-      oppKOEffect.target = player.active;
       store.reduceEffect(state, oppKOEffect);
     }
 
