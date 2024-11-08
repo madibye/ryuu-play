@@ -68,6 +68,7 @@ import { LurantisGX } from './Lurantis-GX';
 import { Salandit } from './DRM Salandit';
 import { SalazzleGX } from './Salazzle-GX';
 import { ReshiramCharizardGX } from './Reshiram Charizard-GX';
+import { Excadrill } from './CEC Excadrill';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -139,4 +140,5 @@ export const setSunAndMoon: Card[] = [
   new Salandit(),
   new SalazzleGX(),
   new ReshiramCharizardGX(),
+  new Excadrill(),
 ];
