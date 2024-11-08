@@ -4,7 +4,7 @@ import { AttackEffect } from '../../game/store/effects/game-effects';
 import { CheckProvidedEnergyEffect } from '../../game/store/effects/check-effects';
 
 
-export class GardevoirSylveonGXUNB extends PokemonCard {
+export class GardevoirSylveonGX extends PokemonCard {
   public tags = [CardTag.POKEMON_GX, CardTag.TAG_TEAM];
   public stage: Stage = Stage.BASIC;
   public cardType: CardType = CardType.FAIRY;

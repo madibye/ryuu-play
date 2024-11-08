@@ -4,7 +4,7 @@ import { BlacephalonUNB } from './UNB Blacephalon';
 import { CherishBall } from './Cherish Ball';
 import { CryogonalUNM } from './UNM Cryogonal';
 import { FireCrystal } from './Fire Crystal';
-import { GardevoirSylveonGXUNB } from './Gardevoir Sylveon-GX';
+import { GardevoirSylveonGX } from './Gardevoir Sylveon-GX';
 import { GiantHearth } from './Giant Hearth';
 import { GreatCatcher } from './Great Catcher';
 import { KeldeoGXUNM } from './Keldeo-GX';
@@ -67,6 +67,7 @@ import { Fomantis } from './SUM Fomantis';
 import { LurantisGX } from './Lurantis-GX';
 import { Salandit } from './DRM Salandit';
 import { SalazzleGX } from './Salazzle-GX';
+import { ReshiramCharizardGX } from './Reshiram Charizard-GX';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -125,7 +126,7 @@ export const setSunAndMoon: Card[] = [
   new CherishBall(),
   new CryogonalUNM(),
   new FireCrystal(),
-  new GardevoirSylveonGXUNB(),
+  new GardevoirSylveonGX(),
   new GiantHearth(),
   new GreatCatcher(),
   new KeldeoGXUNM(),
@@ -137,4 +138,5 @@ export const setSunAndMoon: Card[] = [
   new LurantisGX(),
   new Salandit(),
   new SalazzleGX(),
+  new ReshiramCharizardGX(),
 ];
