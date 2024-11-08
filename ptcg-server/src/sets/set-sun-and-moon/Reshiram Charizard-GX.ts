@@ -26,7 +26,7 @@ export class ReshiramCharizardGX extends PokemonCard {
     {
       name: 'Flare Strike',
       cost: [CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.COLORLESS],
-      damage: 150,
+      damage: 230,
       text: 'This Pokemon can\'t use Flare Strike during your next turn.'
     },
     {
@@ -39,33 +39,30 @@ export class ReshiramCharizardGX extends PokemonCard {
     },
   ];
 
-  private readonly CANT_FLARE_STRIKE_NEXT_TURN_MARKER = 'CANT_FLARE_STRIKE_NEXT_TURN_MARKER';
-  private readonly CANT_FLARE_STRIKE_THIS_TURN_MARKER = 'CANT_FLARE_STRIKE_THIS_TURN_MARKER';
-
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Outrage
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
       const cardList = StateUtils.findCardList(state, this);
       if (!(cardList instanceof PokemonCardList)) { return state; }
-      effect.damage += cardList.damage
+      effect.damage += cardList.damage;
     }
 
     // Flare Strike
     if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
       const marker = effect.player.marker;
-      if (marker.hasMarker(this.CANT_FLARE_STRIKE_THIS_TURN_MARKER, this)) {
+      if (marker.hasMarker(PokemonCardList.ATTACK_USED_MARKER, this)) {
         throw new GameError(GameMessage.BLOCKED_BY_EFFECT);
       }
-      marker.addMarker(this.CANT_FLARE_STRIKE_NEXT_TURN_MARKER, this);
+      marker.addMarker(PokemonCardList.ATTACK_USED_MARKER, this);
     }
 
     // Flare Strike -- Some silly-looking code to handle the attack next turn logic
     if (effect instanceof EndTurnEffect) {
       const marker = effect.player.marker;
-      marker.removeMarker(this.CANT_FLARE_STRIKE_THIS_TURN_MARKER, this);
-      if (marker.hasMarker(this.CANT_FLARE_STRIKE_NEXT_TURN_MARKER, this)) {
-        marker.removeMarker(this.CANT_FLARE_STRIKE_NEXT_TURN_MARKER, this);
-        marker.addMarker(this.CANT_FLARE_STRIKE_THIS_TURN_MARKER, this);
+      marker.removeMarker(PokemonCardList.ATTACK_USED_2_MARKER, this);
+      if (marker.hasMarker(PokemonCardList.ATTACK_USED_MARKER, this)) {
+        marker.removeMarker(PokemonCardList.ATTACK_USED_MARKER, this);
+        marker.addMarker(PokemonCardList.ATTACK_USED_2_MARKER, this);
       }
     }
 

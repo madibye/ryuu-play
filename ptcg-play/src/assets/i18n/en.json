@@ -405,6 +405,7 @@
     "LOG_POKEMON_KO": "{{name}} is KO.",
     "LOG_SETUP_NO_BASIC_POKEMON": "{{name}} has no basic Pokemon in the hand.",
     "LOG_STARTS_BECAUSE_OF_ABILITY": "{{name}} starts the game because of {{ability}} ability.",
+    "LOG_ABILITY_BLOCKS_DAMAGE": "{{name}}'s {{pokemon}} blocks damage.",
     "LOG_TEXT": "{{text}}",
     "LOG_TIME_ELAPSED": "Time elapsed for {{name}}.",
     "LOG_TURN": "Turn {{turn}}."

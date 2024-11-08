@@ -14,7 +14,8 @@ export enum GameEffects {
   ATTACK_EFFECT = 'ATTACK_EFFECT',
   KNOCK_OUT_EFFECT = 'KNOCK_OUT_EFFECT',
   HEAL_EFFECT = 'HEAL_EFFECT',
-  EVOLVE_EFFECT = 'EVOLVE_EFFECT'
+  EVOLVE_EFFECT = 'EVOLVE_EFFECT',
+  COIN_FLIP_EFFECT = 'COIN_FLIP_EFFECT',
 }
 
 export class RetreatEffect implements Effect {
@@ -139,5 +140,15 @@ export class EvolveEffect implements Effect {
     this.player = player;
     this.target = target;
     this.pokemonCard = pokemonCard;
+  }
+}
+
+export class CoinFlipEffect implements Effect {
+  readonly type: string = GameEffects.COIN_FLIP_EFFECT;
+  public preventDefault = false;
+  public player: Player;
+
+  constructor(player: Player) {
+    this.player = player;
   }
 }
