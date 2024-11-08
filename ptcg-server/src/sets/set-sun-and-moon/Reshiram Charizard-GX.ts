@@ -19,19 +19,19 @@ export class ReshiramCharizardGX extends PokemonCard {
   public attacks = [
     {
       name: 'Outrage',
-      cost: [CardType.FIRE, CardType.COLORLESS],
+      cost: [/*CardType.FIRE, CardType.COLORLESS*/],
       damage: 30,
       text: 'This attack does 10 more damage for each damage counter on this Pokemon.'
     },
     {
       name: 'Flare Strike',
-      cost: [CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.COLORLESS],
+      cost: [/*CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.COLORLESS*/],
       damage: 230,
       text: 'This Pokemon can\'t use Flare Strike during your next turn.'
     },
     {
       name: 'Double Blaze-GX',
-      cost: [CardType.FIRE, CardType.FIRE, CardType.FIRE],
+      cost: [/*CardType.FIRE, CardType.FIRE, CardType.FIRE*/],
       damage: 200,
       text: 'If this Pokemon has at least 3 extra R Energy attached to it (in addition to this attack\'s cost), ' +
         'this attack does 100 more damage, and this attack\'s damage isn\'t affected by any effects on your ' +
@@ -76,7 +76,7 @@ export class ReshiramCharizardGX extends PokemonCard {
       }
       player.usedGX = true;
 
-      const extraEffectCost: CardType[] = [CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE];
+      const extraEffectCost: CardType[] = [CardType.GRASS /*CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE, CardType.FIRE*/];
       const checkProvidedEnergy = new CheckProvidedEnergyEffect(player);
       store.reduceEffect(state, checkProvidedEnergy);
       const meetsExtraEffectCost = StateUtils.checkEnoughEnergy(checkProvidedEnergy.energyMap, extraEffectCost);

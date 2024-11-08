@@ -70,6 +70,9 @@ import { SalazzleGX } from './Salazzle-GX';
 import { ReshiramCharizardGX } from './Reshiram Charizard-GX';
 import { Excadrill } from './CEC Excadrill';
 import { Kiawe } from './Kiawe';
+import { WeedleTEU } from './TEU Weedle';
+import { KakunaTEU } from './TEU Kakuna';
+import { BeedrillTEU } from './TEU Beedrill';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -143,4 +146,7 @@ export const setSunAndMoon: Card[] = [
   new ReshiramCharizardGX(),
   new Excadrill(),
   new Kiawe(),
+  new WeedleTEU(),
+  new KakunaTEU(),
+  new BeedrillTEU(),
 ];
