@@ -29,6 +29,10 @@ import { Garganaclex } from './Garganacl ex';
 import { RowletOBF } from './OBF Rowlet';
 import { DartrixOBF } from './OBF Dartrix';
 import { Decidueyeex } from './Decidueye ex';
+import { Orthworm } from './PAR Orthworm';
+import { Rabsca } from './SSP Rabsca';
+import { Rellor } from './SSP Rellor';
+import { Wochien } from './SSP Wo-chien';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -61,4 +65,8 @@ export const setScarletAndViolet: Card[] = [
   new RowletOBF(),
   new DartrixOBF(),
   new Decidueyeex(),
+  new Orthworm(),
+  new Rabsca(),
+  new Rellor(),
+  new Wochien(),
 ];
