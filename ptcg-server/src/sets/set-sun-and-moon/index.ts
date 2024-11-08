@@ -69,6 +69,7 @@ import { Salandit } from './DRM Salandit';
 import { SalazzleGX } from './Salazzle-GX';
 import { ReshiramCharizardGX } from './Reshiram Charizard-GX';
 import { Excadrill } from './CEC Excadrill';
+import { Kiawe } from './Kiawe';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -141,4 +142,5 @@ export const setSunAndMoon: Card[] = [
   new SalazzleGX(),
   new ReshiramCharizardGX(),
   new Excadrill(),
+  new Kiawe(),
 ];

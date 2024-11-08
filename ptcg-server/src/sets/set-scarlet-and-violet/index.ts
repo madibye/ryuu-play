@@ -33,6 +33,10 @@ import { Orthworm } from './PAR Orthworm';
 import { Rabsca } from './SSP Rabsca';
 import { Rellor } from './SSP Rellor';
 import { Wochien } from './SSP Wo-chien';
+import { Kofu } from './Kofu';
+import { Crabrawler } from './SCR Crabrawler';
+import { Crabominable } from './SCR Crabominable';
+import { Veluza } from './SCR Veluza';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -69,4 +73,8 @@ export const setScarletAndViolet: Card[] = [
   new Rabsca(),
   new Rellor(),
   new Wochien(),
+  new Kofu(),
+  new Crabrawler(),
+  new Crabominable(),
+  new Veluza(),
 ];
