@@ -87,7 +87,7 @@ export class Relicanth extends PokemonCard {
       if (cardList === player.active && player.active.getPokemonCard() !== undefined){
         const pokemons = cardList.getPokemons();
         this.checkAttack(state, store, player, pokemons.slice(0)[0], energyMap, pokemonCards, blocked);
-        if (player.active.getPokemonCard()?.stage === Stage.STAGE_2){
+        if (player.active.getPokemonCard()?.stage === Stage.STAGE_2 && pokemons.slice(1)[0].stage !== Stage.STAGE_2){
           this.checkAttack(state, store, player, pokemons.slice(1)[0], energyMap, pokemonCards, blocked);
         }
       }
