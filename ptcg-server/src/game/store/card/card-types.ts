@@ -15,8 +15,10 @@ export enum CardTag {
   TAG_TEAM = 'TAG TEAM',
   ACE_SPEC = 'ACE SPEC',
   PRISM_STAR = 'Prism Star',
+  RADIANT_POKEMON = 'Radiant',
   SINGLE_STRIKE = 'Single Strike',
   RAPID_STRIKE = 'Rapid Strike',
+  FUSION_STRIKE = 'Fusion Strike',
 }
 
 export enum SuperType {

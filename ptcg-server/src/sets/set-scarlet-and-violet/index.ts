@@ -8,7 +8,7 @@ import { EeveeSCR } from './SCR Eevee';
 import { EeveeEx } from './Eevee ex';
 import { ClemontsQuickWit } from './Clemonts Quick Wit';
 import { JasminesGaze } from './Jasmines Gaze';
-import { Drasna } from './drasna';
+import { Drasna } from './Drasna';
 import { ChillTeaserToy } from './Chill Teaser Toy';
 import { DurantEx } from './Durant ex';
 import { Espeonex } from './Espeon ex';
@@ -38,6 +38,7 @@ import { Crabrawler } from './SCR Crabrawler';
 import { Crabominable } from './SCR Crabominable';
 import { Veluza } from './SCR Veluza';
 import { Relicanth } from './TEF Relicanth';
+import { SlowkingSCR } from './SCR Slowking';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -79,4 +80,5 @@ export const setScarletAndViolet: Card[] = [
   new Crabominable(),
   new Veluza(),
   new Relicanth(),
+  new SlowkingSCR(),
 ];

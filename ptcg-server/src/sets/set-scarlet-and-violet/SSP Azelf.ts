@@ -8,15 +8,15 @@ export class AzelfSSP extends PokemonCard {
   public hp: number = 70;
   public weakness = [{ type: CardType.LIGHTNING }];
   public resistance = [{ type: CardType.FIGHTING, value: -20 }];
-  public retreat = [ CardType.COLORLESS ];
+  public retreat = [CardType.COLORLESS];
   public set = 'SVI';
   public name = 'Azelf';
   public fullName = 'Azelf SSP';
   public attacks = [
     {
       name: 'Neurokinesis',
-      cost: [ CardType.PSYCHIC, CardType.COLORLESS ],
-      damage: 0,
+      cost: [CardType.PSYCHIC, CardType.COLORLESS],
+      damage: 10,
       text: 'This attack does 10 more damage for each damage counter on all of your opponent\'s Pokemon.'
     },
   ];
@@ -25,7 +25,7 @@ export class AzelfSSP extends PokemonCard {
     // Neurokinesis
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
       const opponent = effect.opponent;
-      opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList) => {effect.damage += cardList.damage;});
+      opponent.forEachPokemon(PlayerType.TOP_PLAYER, (cardList) => { effect.damage += cardList.damage; });
     }
     return state;
   }
