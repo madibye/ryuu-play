@@ -1,5 +1,5 @@
 import { PokemonCard } from '../../game/store/card/pokemon-card';
-import { Stage, CardType, SuperType, EnergyType } from '../../game/store/card/card-types';
+import { Stage, CardType, SuperType, EnergyType, CardTag } from '../../game/store/card/card-types';
 import { StoreLike, State, StateUtils, Card, ChooseCardsPrompt, EnergyCard, GameError } from '../../game';
 import { ShuffleDeckPrompt } from '../../game';
 import { PlayerType } from '../../game';
@@ -39,6 +39,8 @@ function* useWhirlpool(next: Function, store: StoreLike, state: State,
 export class DrampaGX extends PokemonCard {
 
   public stage: Stage = Stage.BASIC;
+
+  public tags: string[] = [CardTag.POKEMON_GX];
 
   public cardType: CardType = CardType.COLORLESS;
 
