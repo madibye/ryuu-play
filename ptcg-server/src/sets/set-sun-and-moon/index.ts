@@ -74,6 +74,10 @@ import { WeedleTEU } from './TEU Weedle';
 import { KakunaTEU } from './TEU Kakuna';
 import { BeedrillTEU } from './TEU Beedrill';
 import { WeedleTEU2 } from './TEU Weedle 2';
+import {VolcanionPS} from './FLI Volcanion PS';
+import {DianciePS} from './FLI Diancie PS';
+import {SolgaleoPS} from './UPR Solgaleo PS';
+import {LunalaPS} from './UPR Lunala PS';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -151,4 +155,8 @@ export const setSunAndMoon: Card[] = [
   new WeedleTEU2(),
   new KakunaTEU(),
   new BeedrillTEU(),
+  new VolcanionPS(),
+  new DianciePS(),
+  new SolgaleoPS(),
+  new LunalaPS(),
 ];
