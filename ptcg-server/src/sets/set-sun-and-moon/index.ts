@@ -73,6 +73,7 @@ import { Kiawe } from './Kiawe';
 import { WeedleTEU } from './TEU Weedle';
 import { KakunaTEU } from './TEU Kakuna';
 import { BeedrillTEU } from './TEU Beedrill';
+import { WeedleTEU2 } from './TEU Weedle 2';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -147,6 +148,7 @@ export const setSunAndMoon: Card[] = [
   new Excadrill(),
   new Kiawe(),
   new WeedleTEU(),
+  new WeedleTEU2(),
   new KakunaTEU(),
   new BeedrillTEU(),
 ];

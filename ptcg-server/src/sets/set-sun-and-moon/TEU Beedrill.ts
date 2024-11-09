@@ -1,7 +1,7 @@
 import { CardType, GameError, GameMessage, PokemonCard, PokemonCardList, Stage, State, StateUtils, StoreLike } from '../../game';
 import { DealDamageEffect } from '../../game/store/effects/attack-effects';
 import { Effect } from '../../game/store/effects/effect';
-import { AttackEffect, KnockOutEffect } from '../../game/store/effects/game-effects';
+import { AttackEffect } from '../../game/store/effects/game-effects';
 
 export class BeedrillTEU extends PokemonCard {
 
@@ -49,11 +49,9 @@ export class BeedrillTEU extends PokemonCard {
       // If no damage counters on ourself, can't use the attack.
       if (cardList.damage <= 0) { throw new GameError(GameMessage.BLOCKED_BY_EFFECT); }
 
-      // Knock out both active Pokemon.
-      const selfKOEffect = new KnockOutEffect(opponent, player.active);
-      store.reduceEffect(state, selfKOEffect);
-      const oppKOEffect = new KnockOutEffect(player, opponent.active);
-      store.reduceEffect(state, oppKOEffect);
+      // Knock out both active Pokemon, the dumb way.
+      player.active.damage += 999;
+      opponent.active.damage += 999;
     }
 
     // Reckless Charge

@@ -9,6 +9,7 @@ import { Lucario } from './lucario';
 import { LucarioEx } from './lucario-ex';
 import { MysteryEnergy } from './mystery-energy';
 import { Phanpy } from './phanpy';
+import { WeedlePRC } from './PRC Weedle';
 import { Riolu } from './riolu';
 import { Riolu2 } from './riolu2';
 import { ScoopUpCyclone } from './scoop-up-cyclone';
@@ -31,6 +32,7 @@ export const setBlackAndWhite4: Card[] = [
   new Riolu2(),
   new ScoopUpCyclone(),
   new StrongEnergy(),
+  new WeedlePRC(),
   new Wobbuffet(),
-  new Zubat()
+  new Zubat(),
 ];

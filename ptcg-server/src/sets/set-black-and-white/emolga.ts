@@ -1,7 +1,6 @@
 import { PokemonCard } from '../../game/store/card/pokemon-card';
 import { Stage, CardType, SuperType } from '../../game/store/card/card-types';
-import { StoreLike, State, ChooseCardsPrompt, PokemonCardList, Card,
-  ShuffleDeckPrompt, GameMessage } from '../../game';
+import { StoreLike, State, ChooseCardsPrompt, PokemonCardList, Card, ShuffleDeckPrompt, GameMessage } from '../../game';
 import { AttackEffect } from '../../game/store/effects/game-effects';
 import { Effect } from '../../game/store/effects/effect';
 
@@ -9,7 +8,8 @@ function* useCallForFamily(next: Function, store: StoreLike, state: State,
   effect: AttackEffect): IterableIterator<State> {
   const player = effect.player;
   const slots: PokemonCardList[] = player.bench.filter(b => b.cards.length === 0);
-  const max = Math.min(slots.length, 2);
+  if (slots.length == 0) { return state; } // Attack does nothing if no bench slots.
+  const max = Math.min(slots.length, 1);
 
   let cards: Card[] = [];
   yield store.prompt(state, new ChooseCardsPrompt(
@@ -49,19 +49,19 @@ export class Emolga extends PokemonCard {
 
   public resistance = [{ type: CardType.FIGHTING, value: -20 }];
 
-  public retreat = [ ];
+  public retreat = [];
 
   public attacks = [
     {
       name: 'Call for Family',
-      cost: [ CardType.COLORLESS ],
+      cost: [CardType.COLORLESS],
       damage: 0,
       text: 'Search your deck for 2 Basic Pokemon and put them onto your ' +
         'Bench. Shuffle your deck afterward.'
     },
     {
       name: 'Static Shock',
-      cost: [ CardType.LIGHTNING ],
+      cost: [CardType.LIGHTNING],
       damage: 20,
       text: ''
     }

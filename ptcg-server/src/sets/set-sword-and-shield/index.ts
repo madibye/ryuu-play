@@ -13,6 +13,10 @@ import { BirdKeeper } from './Bird Keeper';
 import { DucklettDAA } from './DAA Ducklett';
 import { SwannaDAA } from './DAA Swanna';
 import { StarlyDAA } from './DAA Starly';
+import { WeedleVIV } from './VIV Weedle';
+import { WeedleCPA } from './CPA Weedle';
+import { WeedleCRE } from './CRE Weedle';
+import { BeedrillVIV } from './VIV Beedrill';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -29,4 +33,8 @@ export const setSwordAndShield: Card[] = [
   new StarlyDAA(),
   new DucklettDAA(),
   new SwannaDAA(),
+  new WeedleVIV(),
+  new WeedleCPA(),
+  new WeedleCRE(),
+  new BeedrillVIV(),
 ];

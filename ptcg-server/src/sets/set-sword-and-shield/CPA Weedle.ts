@@ -2,7 +2,6 @@ import { Card, CardType, ChooseCardsPrompt, GameMessage, PokemonCard, PokemonCar
 import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect } from '../../game/store/effects/game-effects';
 
-
 function* useCallForFamily(next: Function, store: StoreLike, state: State, effect: AttackEffect): IterableIterator<State> {
   const player = effect.player;
   const slots: PokemonCardList[] = player.bench.filter(b => b.cards.length === 0);
@@ -35,32 +34,36 @@ function* useCallForFamily(next: Function, store: StoreLike, state: State, effec
   });
 }
 
-export class EeveeSCR extends PokemonCard {
+export class WeedleCPA extends PokemonCard {
+
   public stage: Stage = Stage.BASIC;
-  public cardType: CardType = CardType.COLORLESS;
+
+  public cardType: CardType = CardType.GRASS;
+
   public hp: number = 60;
-  public weakness = [{ type: CardType.FIGHTING }];
+
+  public weakness = [{ type: CardType.FIRE }];
+
   public retreat = [CardType.COLORLESS];
-  public set = 'SVI';
-  public name = 'Eevee';
-  public fullName = 'Eevee SCR';
+
+  public set = 'SSH';
+
+  public name = 'Weedle';
+
+  public fullName = 'Weedle CPA';
+
   public attacks = [
     {
       name: 'Call for Family',
       cost: [CardType.COLORLESS],
       damage: 0,
-      text: 'Search your deck for a Basic Pokemon and put it onto your Bench. Then, shuffle your deck.'
-    },
-    {
-      name: 'Gnaw',
-      cost: [CardType.COLORLESS, CardType.COLORLESS],
-      damage: 20,
-      text: '',
+      text: 'Search your deck for a Basic Pokemon and put it onto your Bench. Then, shuffle your deck. '
     },
   ];
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
 
+    // Call for Family
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
       const generator = useCallForFamily(() => generator.next(), store, state, effect);
       return generator.next().value;

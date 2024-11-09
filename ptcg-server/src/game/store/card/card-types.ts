@@ -15,6 +15,8 @@ export enum CardTag {
   TAG_TEAM = 'TAG TEAM',
   ACE_SPEC = 'ACE SPEC',
   PRISM_STAR = 'Prism Star',
+  SINGLE_STRIKE = 'Single Strike',
+  RAPID_STRIKE = 'Rapid Strike',
 }
 
 export enum SuperType {
