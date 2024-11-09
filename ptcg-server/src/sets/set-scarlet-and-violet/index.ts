@@ -37,6 +37,7 @@ import { Kofu } from './Kofu';
 import { Crabrawler } from './SCR Crabrawler';
 import { Crabominable } from './SCR Crabominable';
 import { Veluza } from './SCR Veluza';
+import { Relicanth } from './TEF Relicanth';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -77,4 +78,5 @@ export const setScarletAndViolet: Card[] = [
   new Crabrawler(),
   new Crabominable(),
   new Veluza(),
+  new Relicanth(),
 ];
