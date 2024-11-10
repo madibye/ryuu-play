@@ -65,14 +65,7 @@ export class Crabominable extends PokemonCard {
         }
       });
       const index = effect.cost.indexOf(CardType.COLORLESS);
-
-      switch(kofuCount){
-        case 1: effect.cost.splice(index, 1); break;
-        case 2: effect.cost.splice(index, 2); break;
-        case 3: effect.cost.splice(index, 3); break;
-        case 4: effect.cost.splice(index, 4); break;
-        default: effect.cost.splice(index, 0); break;
-      }
+      effect.cost.splice(index, kofuCount);
         
       return state;
     }
