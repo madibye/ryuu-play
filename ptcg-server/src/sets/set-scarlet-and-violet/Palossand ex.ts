@@ -1,6 +1,6 @@
 import { PokemonCard } from '../../game/store/card/pokemon-card';
 import { Stage, CardType, CardTag } from '../../game/store/card/card-types';
-import { StoreLike, State, GameMessage, StateUtils, GameError } from '../../game';
+import { StoreLike, State, GameMessage, StateUtils, GameError, PokemonCardList } from '../../game';
 import { PutCountersEffect } from '../../game/store/effects/attack-effects';
 import { Effect } from '../../game/store/effects/effect';
 import { PlayerType } from '../../game';
@@ -47,22 +47,22 @@ export class Palossandex extends PokemonCard {
 
   public fullName: string = 'Palossand ex SSP';
 
-  public readonly SAND_TOMB_MARKER = 'SAND_TOMB_MARKER';
-
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Sand Tomb
     if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
       const player = effect.player;
       const opponent = StateUtils.getOpponent(state, player);
-      opponent.active.marker.addMarker(this.SAND_TOMB_MARKER, this);
+      opponent.active.marker.addMarker(PokemonCardList.DEFENDING_POKEMON_CANNOT_RETREAT_MARKER, this);
     }
 
-    if (effect instanceof CheckRetreatCostEffect && effect.player.active.marker.hasMarker(this.SAND_TOMB_MARKER, this)) {
+    if (effect instanceof CheckRetreatCostEffect && 
+      effect.player.active.marker.hasMarker(PokemonCardList.DEFENDING_POKEMON_CANNOT_RETREAT_MARKER, this)
+    ) {
       throw new GameError(GameMessage.BLOCKED_BY_EFFECT);
     }
 
     if (effect instanceof EndTurnEffect) {
-      effect.player.active.marker.removeMarker(this.SAND_TOMB_MARKER, this);
+      effect.player.active.marker.removeMarker(PokemonCardList.DEFENDING_POKEMON_CANNOT_RETREAT_MARKER, this);
     }
 
     // Barite Jail

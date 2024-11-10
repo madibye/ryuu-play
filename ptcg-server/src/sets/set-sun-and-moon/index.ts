@@ -82,6 +82,7 @@ import { MewtwoMewGX } from './Mewtwo Mew-GX';
 import { MarshadowGX } from './Marshadow-GX';
 import { GiratinaGarchompGX } from './Giratina Garchomp-GX';
 import { ShrineOfPunishment } from './Shrine of Punishment';
+import { EelektrossUNM } from './UNM Eelektross';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -167,4 +168,5 @@ export const setSunAndMoon: Card[] = [
   new MarshadowGX(),
   new GiratinaGarchompGX(),
   new ShrineOfPunishment(),
+  new EelektrossUNM(),
 ];
