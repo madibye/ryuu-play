@@ -79,6 +79,7 @@ import { DianciePS } from './FLI Diancie PS';
 import { SolgaleoPS } from './UPR Solgaleo PS';
 import { LunalaPS } from './UPR Lunala PS';
 import { MewtwoMewGX } from './Mewtwo Mew-GX';
+import { MarshadowGX } from './Marshadow-GX';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -161,4 +162,5 @@ export const setSunAndMoon: Card[] = [
   new SolgaleoPS(),
   new LunalaPS(),
   new MewtwoMewGX(),
+  new MarshadowGX(),
 ];
