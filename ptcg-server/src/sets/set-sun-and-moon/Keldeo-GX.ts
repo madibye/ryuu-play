@@ -1,7 +1,7 @@
 import { CardTag, CardType, GameError, GameMessage, PokemonCard, PowerType, Stage, State, StateUtils, StoreLike } from '../../game';
 import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects';
-import { AbstractAttackEffect } from '../../game/store/effects/attack-effects';
+import { AbstractAttackEffect, AfterDamageEffect, ApplyWeaknessEffect } from '../../game/store/effects/attack-effects';
 
 export class KeldeoGXUNM extends PokemonCard {
   public tags = [CardTag.POKEMON_GX];
@@ -58,11 +58,19 @@ export class KeldeoGXUNM extends PokemonCard {
     }
 
     // Sonic Edge
-    //if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
-    //  const damage = effect.damage;
-    //  effect.damage = 0;
-    //  if (damage > 0) { effect.opponent.active.damage += damage; }
-    //}
+    if (effect instanceof AttackEffect && effect.attack === this.attacks[0]) {
+      const applyWeakness = new ApplyWeaknessEffect(effect, effect.damage);
+      store.reduceEffect(state, applyWeakness);
+      const damage = applyWeakness.damage;
+
+      effect.damage = 0;
+
+      if (damage > 0) {
+        effect.opponent.active.damage += damage;
+        const afterDamage = new AfterDamageEffect(effect, damage);
+        state = store.reduceEffect(state, afterDamage);
+      }
+    }
 
     // Resolute Blade-GX
     if (effect instanceof AttackEffect && effect.attack === this.attacks[1]) {
