@@ -47,8 +47,12 @@ export class Crabominable extends PokemonCard {
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Food Prep
-    if (effect instanceof CheckAttackCostEffect && effect.attack === this.attacks[0]) {
+    if (effect instanceof CheckAttackCostEffect) {
       const player = effect.player;
+
+      if (effect.player !== player || player.active.getPokemonCard() !== this){
+        return state;
+      }
 
       // i love checking for ability lock woooo
       try {

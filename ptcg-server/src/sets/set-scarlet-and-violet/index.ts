@@ -8,7 +8,7 @@ import { EeveeSCR } from './SCR Eevee';
 import { EeveeEx } from './Eevee ex';
 import { ClemontsQuickWit } from './Clemonts Quick Wit';
 import { JasminesGaze } from './Jasmines Gaze';
-import { Drasna } from './Drasna';
+import { Drasna } from './drasna';
 import { ChillTeaserToy } from './Chill Teaser Toy';
 import { DurantEx } from './Durant ex';
 import { Espeonex } from './Espeon ex';
@@ -39,6 +39,14 @@ import { Crabominable } from './SCR Crabominable';
 import { Veluza } from './SCR Veluza';
 import { Relicanth } from './TEF Relicanth';
 import { SlowkingSCR } from './SCR Slowking';
+import { ArmarougeEX } from './Armarouge ex';
+import { Honedge } from './PAR Honedge';
+import { Doublade } from './PAR Doublade';
+import { Aegislash } from './PAR Aegislash';
+import { Aegislashex } from './Aegislash ex';
+import { Torracat } from './TEF Torracat';
+import { Incineroarex } from './Incineroar ex';
+import { Litten } from './TEF Litten';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -81,4 +89,12 @@ export const setScarletAndViolet: Card[] = [
   new Veluza(),
   new Relicanth(),
   new SlowkingSCR(),
+  new ArmarougeEX(),
+  new Honedge(),
+  new Doublade(),
+  new Aegislash(),
+  new Aegislashex(),
+  new Litten(),
+  new Torracat(),
+  new Incineroarex(),
 ];
