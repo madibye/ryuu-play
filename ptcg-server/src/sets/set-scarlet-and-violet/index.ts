@@ -47,6 +47,12 @@ import { Aegislashex } from './Aegislash ex';
 import { Torracat } from './TEF Torracat';
 import { Incineroarex } from './Incineroar ex';
 import { Litten } from './TEF Litten';
+import { Timburr } from './TWM Timburr';
+import { Gurdurr } from './TWM Gurdurr';
+import { Conkeldurr } from './TWM Conkeldurr';
+import { Starmie } from './MEW Starmie';
+import { Duraludon } from './SCR Duraludon';
+import { GravityGemstone } from './Gravity Gemstone';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -97,4 +103,10 @@ export const setScarletAndViolet: Card[] = [
   new Litten(),
   new Torracat(),
   new Incineroarex(),
+  new Timburr(),
+  new Gurdurr(),
+  new Conkeldurr(),
+  new Starmie(),
+  new Duraludon(),
+  new GravityGemstone(),  
 ];
