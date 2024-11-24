@@ -10,6 +10,7 @@ import { FightingEnergy } from './fighting-energy';
 import { FireEnergy } from './fire-energy';
 import { Floatzel } from './floatzel';
 import { GrassEnergy } from './grass-energy';
+import { HolonsCastform } from './Holon\'s Castform';
 import { LightningEnergy } from './lightning-energy';
 import { LuxuryBall } from './luxury-ball';
 import { MetalEnergy } from './metal-energy';
@@ -56,5 +57,6 @@ export const setDiamondAndPearl: Card[] = [
   new UnownR(),
   new Uxie(),
   new VictoryMedal(),
-  new WaterEnergy()
+  new WaterEnergy(),
+  new HolonsCastform(),
 ];
