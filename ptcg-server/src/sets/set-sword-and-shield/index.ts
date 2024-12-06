@@ -3,7 +3,7 @@ import { Charizard } from './VIV Charizard';
 import { Charmander } from './VIV Charmander';
 import { Charmander2 } from './PSSH Charmander';
 import { Charmeleon } from './VIV Charmeleon';
-import { Leon } from './Leon';
+import { Leon } from './leon';
 import { Oranguru } from './SSH Oranguru';
 import { Snorlax } from './VIV Snorlax';
 import { HisuianArcanine } from './LOR Hisuian Arcanine';
@@ -17,6 +17,7 @@ import { WeedleVIV } from './VIV Weedle';
 import { WeedleCPA } from './CPA Weedle';
 import { WeedleCRE } from './CRE Weedle';
 import { BeedrillVIV } from './VIV Beedrill';
+import { OranguruV } from './Oranguru V';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -37,4 +38,5 @@ export const setSwordAndShield: Card[] = [
   new WeedleCPA(),
   new WeedleCRE(),
   new BeedrillVIV(),
+  new OranguruV(),
 ];

@@ -53,6 +53,10 @@ import { Conkeldurr } from './TWM Conkeldurr';
 import { Starmie } from './MEW Starmie';
 import { Duraludon } from './SCR Duraludon';
 import { GravityGemstone } from './Gravity Gemstone';
+import { Gimmighoul } from './SSP Gimmighoul';
+import { Cofagrigus } from './SSP Cofagrigus';
+import { Yamask } from './SSP Yamask';
+import { EnergySearchPRO } from './Energy Search PRO';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -109,4 +113,8 @@ export const setScarletAndViolet: Card[] = [
   new Starmie(),
   new Duraludon(),
   new GravityGemstone(),  
+  new Gimmighoul(),
+  new Cofagrigus(),
+  new Yamask(),
+  new EnergySearchPRO(),
 ];
