@@ -83,6 +83,10 @@ import { MarshadowGX } from './Marshadow-GX';
 import { GiratinaGarchompGX } from './Giratina Garchomp-GX';
 import { ShrineOfPunishment } from './Shrine of Punishment';
 import { EelektrossUNM } from './UNM Eelektross';
+import { MimikyuGX } from './Mimikyu-GX';
+import { SMPGreninjaGX } from './SMP Greninja-GX';
+import { UPROranguru } from './UPR Oranguru';
+import { BeastEnergy } from './Beast Energy PS';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -169,4 +173,8 @@ export const setSunAndMoon: Card[] = [
   new GiratinaGarchompGX(),
   new ShrineOfPunishment(),
   new EelektrossUNM(),
+  new MimikyuGX(),
+  new SMPGreninjaGX(),
+  new UPROranguru(),
+  new BeastEnergy(),
 ];

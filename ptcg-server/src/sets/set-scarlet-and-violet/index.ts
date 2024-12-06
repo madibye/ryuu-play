@@ -57,6 +57,7 @@ import { Gimmighoul } from './SSP Gimmighoul';
 import { Cofagrigus } from './SSP Cofagrigus';
 import { Yamask } from './SSP Yamask';
 import { EnergySearchPRO } from './Energy Search PRO';
+import { AmuletofHope } from './Amulet of Hope';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -117,4 +118,5 @@ export const setScarletAndViolet: Card[] = [
   new Cofagrigus(),
   new Yamask(),
   new EnergySearchPRO(),
+  new AmuletofHope(),
 ];
