@@ -58,6 +58,13 @@ import { Cofagrigus } from './SSP Cofagrigus';
 import { Yamask } from './SSP Yamask';
 import { EnergySearchPRO } from './Energy Search PRO';
 import { AmuletofHope } from './Amulet of Hope';
+import { IronCrown } from './SSP Iron Crown';
+import { AlolanDiglett } from './SSP Alolan Diglett';
+import { Pidove } from './TEF Pidove';
+import { Tranquill } from './TEF Tranquill';
+import { Unfezant } from './TEF Unfezant';
+import { GougingFire } from './SSP Gouging Fire';
+import { AlolanDugtrio } from './SSP Alolan Dugtrio';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -119,4 +126,11 @@ export const setScarletAndViolet: Card[] = [
   new Yamask(),
   new EnergySearchPRO(),
   new AmuletofHope(),
+  new IronCrown(),
+  new AlolanDiglett(),
+  new AlolanDugtrio(),
+  new Pidove(),
+  new Tranquill(),
+  new Unfezant(),
+  new GougingFire(),
 ];
