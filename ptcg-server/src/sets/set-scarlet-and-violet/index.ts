@@ -65,6 +65,11 @@ import { Tranquill } from './TEF Tranquill';
 import { Unfezant } from './TEF Unfezant';
 import { GougingFire } from './SSP Gouging Fire';
 import { AlolanDugtrio } from './SSP Alolan Dugtrio';
+import { Zarude } from './SSP Zarude';
+import { Pawniard } from './SVI Pawniard';
+import { Bisharp } from './SVI Bisharp';
+import { Kingambit } from './SVI Kingambit';
+import { TWMHisuianArcanine } from './TWM Hisuian Arcanine';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -133,4 +138,9 @@ export const setScarletAndViolet: Card[] = [
   new Tranquill(),
   new Unfezant(),
   new GougingFire(),
+  new Zarude(),
+  new Pawniard(),
+  new Bisharp(),
+  new Kingambit(),
+  new TWMHisuianArcanine(),
 ];
