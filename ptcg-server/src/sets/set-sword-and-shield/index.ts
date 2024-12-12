@@ -19,6 +19,8 @@ import { WeedleCRE } from './CRE Weedle';
 import { BeedrillVIV } from './VIV Beedrill';
 import { OranguruV } from './Oranguru V';
 import { HisuianGrowlithe } from './LOR Hisuian Growlithe';
+import { LaprasFST } from './FST Lapras';
+import { ShayminVIV } from './VIV Shaymin';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -41,4 +43,6 @@ export const setSwordAndShield: Card[] = [
   new BeedrillVIV(),
   new OranguruV(),
   new HisuianGrowlithe(),
+  new LaprasFST(),
+  new ShayminVIV(),
 ];

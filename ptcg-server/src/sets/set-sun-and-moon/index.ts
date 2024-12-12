@@ -87,6 +87,8 @@ import { MimikyuGX } from './Mimikyu-GX';
 import { SMPGreninjaGX } from './SMP Greninja-GX';
 import { UPROranguru } from './UPR Oranguru';
 import { BeastEnergy } from './Beast Energy PS';
+import { LucarioUPR } from './UPR Lucario';
+import { GarchompUNM } from './UNM Garchomp';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -177,4 +179,6 @@ export const setSunAndMoon: Card[] = [
   new SMPGreninjaGX(),
   new UPROranguru(),
   new BeastEnergy(),
+  new LucarioUPR(),
+  new GarchompUNM(),
 ];
