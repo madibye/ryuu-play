@@ -21,6 +21,9 @@ import { OranguruV } from './Oranguru V';
 import { HisuianGrowlithe } from './LOR Hisuian Growlithe';
 import { LaprasFST } from './FST Lapras';
 import { ShayminVIV } from './VIV Shaymin';
+import { DuraludonVIV } from './VIV Duraludon';
+import { Meditite } from './LOR Meditite';
+import { Medicham } from './LOR Medicham';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -45,4 +48,7 @@ export const setSwordAndShield: Card[] = [
   new HisuianGrowlithe(),
   new LaprasFST(),
   new ShayminVIV(),
+  new DuraludonVIV(),
+  new Meditite(),
+  new Medicham(),
 ];

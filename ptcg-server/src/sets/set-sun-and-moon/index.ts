@@ -89,6 +89,9 @@ import { UPROranguru } from './UPR Oranguru';
 import { BeastEnergy } from './Beast Energy PS';
 import { LucarioUPR } from './UPR Lucario';
 import { GarchompUNM } from './UNM Garchomp';
+import { Murkrow } from './UPR Murkrow';
+import { Honchkrow } from './UPR Honchkrow';
+import { Tyrogue } from './UNB Tyrogue';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -181,4 +184,7 @@ export const setSunAndMoon: Card[] = [
   new BeastEnergy(),
   new LucarioUPR(),
   new GarchompUNM(),
+  new Murkrow(),
+  new Honchkrow(),
+  new Tyrogue(),
 ];
