@@ -24,6 +24,8 @@ import { ShayminVIV } from './VIV Shaymin';
 import { DuraludonVIV } from './VIV Duraludon';
 import { Meditite } from './LOR Meditite';
 import { Medicham } from './LOR Medicham';
+import { PhanpyVIV } from './VIV Phanpy';
+import { DonphanVIV } from './VIV Donphan';
 
 export const setSwordAndShield: Card[] = [
   new Charizard(),
@@ -51,4 +53,6 @@ export const setSwordAndShield: Card[] = [
   new DuraludonVIV(),
   new Meditite(),
   new Medicham(),
+  new PhanpyVIV(),
+  new DonphanVIV(),
 ];

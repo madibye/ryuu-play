@@ -70,6 +70,7 @@ import { Pawniard } from './SVI Pawniard';
 import { Bisharp } from './SVI Bisharp';
 import { Kingambit } from './SVI Kingambit';
 import { TWMHisuianArcanine } from './TWM Hisuian Arcanine';
+import { HitmonleeMEW } from './MEW Hitmonlee';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -143,4 +144,5 @@ export const setScarletAndViolet: Card[] = [
   new Bisharp(),
   new Kingambit(),
   new TWMHisuianArcanine(),
+  new HitmonleeMEW(),
 ];

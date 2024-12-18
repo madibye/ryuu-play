@@ -92,6 +92,8 @@ import { GarchompUNM } from './UNM Garchomp';
 import { Murkrow } from './UPR Murkrow';
 import { Honchkrow } from './UPR Honchkrow';
 import { Tyrogue } from './UNB Tyrogue';
+import { BlacephalonGX } from './Blacephalon-GX';
+import { YveltalGX } from './Yveltal-GX';
 
 export const setSunAndMoon: Card[] = [
   new AbsolTEU(),
@@ -187,4 +189,6 @@ export const setSunAndMoon: Card[] = [
   new Murkrow(),
   new Honchkrow(),
   new Tyrogue(),
+  new BlacephalonGX(),
+  new YveltalGX(),
 ];
