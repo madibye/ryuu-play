@@ -33,7 +33,7 @@ export class SlakothSSP extends PokemonCard {
 
   public fullName: string = 'Slakoth SSP';
 
-  private readonly CANT_RETREAT_NEXT_TURN_MARKER = 'CANT_RETREAT_NEXT_TURN_MARKER'
+  private readonly CANT_RETREAT_NEXT_TURN_MARKER = 'CANT_RETREAT_NEXT_TURN_MARKER';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     // Take It Easy

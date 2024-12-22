@@ -56,7 +56,7 @@ export class Slakingex extends PokemonCard {
         if (card.tags.includes(CardTag.POKEMON_ex) || card.tags.includes(CardTag.POKEMON_V)) {
           hasSpecialPokemon = true;
         }
-      })
+      });
 
       // Try to reduce PowerEffect, to check if something is blocking our ability
       try {
@@ -67,7 +67,7 @@ export class Slakingex extends PokemonCard {
       }
 
       // If we don't have a ex or V in play, block the attack.
-      if (!hasSpecialPokemon) { throw new GameError(GameMessage.BLOCKED_BY_ABILITY) }
+      if (!hasSpecialPokemon) { throw new GameError(GameMessage.BLOCKED_BY_ABILITY); }
     }
 
 

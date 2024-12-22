@@ -8,7 +8,7 @@ import { EeveeSCR } from './SCR Eevee';
 import { EeveeEx } from './Eevee ex';
 import { ClemontsQuickWit } from './Clemonts Quick Wit';
 import { JasminesGaze } from './Jasmines Gaze';
-import { Drasna } from './drasna';
+import { Drasna } from './Drasna';
 import { ChillTeaserToy } from './Chill Teaser Toy';
 import { DurantEx } from './Durant ex';
 import { Espeonex } from './Espeon ex';
@@ -71,6 +71,12 @@ import { Bisharp } from './SVI Bisharp';
 import { Kingambit } from './SVI Kingambit';
 import { TWMHisuianArcanine } from './TWM Hisuian Arcanine';
 import { HitmonleeMEW } from './MEW Hitmonlee';
+import { SkeledirgeexPAR } from './PAR Skeledirge ex';
+import { SlakothSSP } from './SSP Slakoth';
+import { VigorothSSP } from './SSP Vigoroth';
+import { Slakingex } from './Slaking ex';
+import { IonosBelliboltex } from './Iono\'s Bellibolt ex';
+import { IonosTadbulb } from './Iono\'s Tadbulb';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -126,7 +132,7 @@ export const setScarletAndViolet: Card[] = [
   new Conkeldurr(),
   new Starmie(),
   new Duraludon(),
-  new GravityGemstone(),  
+  new GravityGemstone(),
   new Gimmighoul(),
   new Cofagrigus(),
   new Yamask(),
@@ -145,4 +151,10 @@ export const setScarletAndViolet: Card[] = [
   new Kingambit(),
   new TWMHisuianArcanine(),
   new HitmonleeMEW(),
+  new SkeledirgeexPAR(),
+  new SlakothSSP(),
+  new VigorothSSP(),
+  new Slakingex(),
+  new IonosTadbulb(),
+  new IonosBelliboltex(),
 ];
