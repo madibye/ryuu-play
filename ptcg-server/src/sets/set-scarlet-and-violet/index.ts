@@ -77,6 +77,12 @@ import { VigorothSSP } from './SSP Vigoroth';
 import { Slakingex } from './Slaking ex';
 import { IonosBelliboltex } from './Iono\'s Bellibolt ex';
 import { IonosTadbulb } from './Iono\'s Tadbulb';
+import { NsZorua } from './N\'s Zorua';
+import { NsZoroarkex } from './N\'s Zoroark ex';
+import { NsReshiram } from './N\'s Reshiram';
+import { NsDarumaka } from './N\'s Darumaka';
+import { NsDarmanitan } from './N\'s Darmanitan';
+import { NsSigilyph } from './N\'s Sigilyph';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -157,4 +163,10 @@ export const setScarletAndViolet: Card[] = [
   new Slakingex(),
   new IonosTadbulb(),
   new IonosBelliboltex(),
+  new NsZorua(),
+  new NsZoroarkex(),
+  new NsReshiram(),
+  new NsDarumaka(),
+  new NsDarmanitan(),
+  new NsSigilyph(),
 ];
