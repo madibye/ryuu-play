@@ -4,7 +4,7 @@ import { Stage, CardType, CardTag } from '../../game/store/card/card-types';
 import { PowerType, StoreLike, State, GameMessage, GameError, ChooseCardsPrompt, ChooseAttackPrompt, StateUtils, Attack, GameLog } from '../../game';
 import { Effect } from '../../game/store/effects/effect';
 import { AttackEffect, PowerEffect } from '../../game/store/effects/game-effects';
-import {DealDamageEffect} from '../../game/store/effects/attack-effects';
+import { DealDamageEffect } from '../../game/store/effects/attack-effects';
 
 function* useNightJoker(next: Function, store: StoreLike, state: State,
   effect: AttackEffect): IterableIterator<State> {
@@ -90,12 +90,12 @@ export class NsZoroarkex extends PokemonCard {
 
   public fullName: string = 'N\'s Zoroark ex SV9';
 
-  public readonly TRADE_MAREKER = 'TRADE_MAREKER';
+  public readonly TRADE_MARKER = 'TRADE_MARKER';
 
   public reduceEffect(store: StoreLike, state: State, effect: Effect): State {
     if (effect instanceof PlayPokemonEffect && effect.pokemonCard === this) {
       const player = effect.player;
-      player.marker.removeMarker(this.TRADE_MAREKER, this);
+      player.marker.removeMarker(this.TRADE_MARKER, this);
     }
 
     if (effect instanceof PowerEffect && effect.power === this.powers[0]) {
@@ -103,7 +103,7 @@ export class NsZoroarkex extends PokemonCard {
       if (player.hand.cards.length === 0) {
         throw new GameError(GameMessage.CANNOT_USE_POWER);
       }
-      if (player.marker.hasMarker(this.TRADE_MAREKER, this)) {
+      if (player.marker.hasMarker(this.TRADE_MARKER, this)) {
         throw new GameError(GameMessage.POWER_ALREADY_USED);
       }
       state = store.prompt(state, new ChooseCardsPrompt(
@@ -114,7 +114,7 @@ export class NsZoroarkex extends PokemonCard {
         { allowCancel: false, min: 1, max: 1 }
       ), cards => {
         cards = cards || [];
-        player.marker.addMarker(this.TRADE_MAREKER, this);
+        player.marker.addMarker(this.TRADE_MARKER, this);
         player.hand.moveCardsTo(cards, player.discard);
         player.deck.moveTo(player.hand, 2);
       });
