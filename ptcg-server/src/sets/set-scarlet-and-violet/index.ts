@@ -8,7 +8,7 @@ import { EeveeSCR } from './SCR Eevee';
 import { EeveeEx } from './Eevee ex';
 import { ClemontsQuickWit } from './Clemonts Quick Wit';
 import { JasminesGaze } from './Jasmines Gaze';
-import { Drasna } from './Drasna';
+import { Drasna } from './drasna';
 import { ChillTeaserToy } from './Chill Teaser Toy';
 import { DurantEx } from './Durant ex';
 import { Espeonex } from './Espeon ex';
@@ -83,6 +83,8 @@ import { NsReshiram } from './N\'s Reshiram';
 import { NsDarumaka } from './N\'s Darumaka';
 import { NsDarmanitan } from './N\'s Darmanitan';
 import { NsSigilyph } from './N\'s Sigilyph';
+import { Postwick } from './Postwick';
+import { Levincia } from './Levincia';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -169,4 +171,6 @@ export const setScarletAndViolet: Card[] = [
   new NsDarumaka(),
   new NsDarmanitan(),
   new NsSigilyph(),
+  new Postwick(),
+  new Levincia(),
 ];

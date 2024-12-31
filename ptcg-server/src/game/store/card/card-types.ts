@@ -20,7 +20,8 @@ export enum CardTag {
   RAPID_STRIKE = 'Rapid Strike',
   FUSION_STRIKE = 'Fusion Strike',
   IONOS_POKEMON = 'Iono\'s',
-  N_POKEMON = 'N\'s'
+  N_POKEMON = 'N\'s',
+  HOPS = 'HOPS'
 }
 
 export enum SuperType {
