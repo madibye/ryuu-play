@@ -21,7 +21,8 @@ export enum CardTag {
   FUSION_STRIKE = 'Fusion Strike',
   IONOS_POKEMON = 'Iono\'s',
   N_POKEMON = 'N\'s',
-  HOPS = 'HOPS'
+  HOPS = 'HOPS',
+  LILLIES = 'LILLIES',
 }
 
 export enum SuperType {

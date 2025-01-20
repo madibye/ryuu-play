@@ -97,6 +97,12 @@ import { Pupitar } from './SV9 Pupitar';
 import { Magmar } from './SV9 Magmar';
 import { Magmortar } from './SV9 Magmortar';
 import { Volcanionex } from './Volcanion ex';
+import { HopsBag } from './Hop\'s Bag';
+import { LilliesCutiefly } from './Lillie\'s Cutiefly';
+import { LilliesRibombee } from './Lillie\'s Ribombee';
+import { NsCastle } from './N\'s Castle';
+import { Shuppet } from './SV9 Shuppet';
+import { Banette } from './SV9 Banette';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -197,4 +203,10 @@ export const setScarletAndViolet: Card[] = [
   new Magmar(),
   new Magmortar(),
   new Volcanionex(),
+  new HopsBag(),
+  new LilliesCutiefly(),
+  new LilliesRibombee(),
+  new NsCastle(),
+  new Shuppet(),
+  new Banette(),
 ];
