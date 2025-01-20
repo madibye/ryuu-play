@@ -85,6 +85,18 @@ import { NsDarmanitan } from './N\'s Darmanitan';
 import { NsSigilyph } from './N\'s Sigilyph';
 import { Postwick } from './Postwick';
 import { Levincia } from './Levincia';
+import { Dudunsparceex } from './Dudunsparce ex';
+import { NsJoltik } from './N\'s Joltik';
+import { NsPurrloin } from './N\'s Purrlon';
+import { Salamenceex } from './Salamence ex';
+import { Bagon } from './SV9 Bagon';
+import { Shelgon } from './SV9 Shelgon';
+import { Tyranitar } from './SV9 Tyranitar';
+import { Larvitar } from './SV9 Larvitar';
+import { Pupitar } from './SV9 Pupitar';
+import { Magmar } from './SV9 Magmar';
+import { Magmortar } from './SV9 Magmortar';
+import { Volcanionex } from './Volcanion ex';
 
 export const setScarletAndViolet: Card[] = [
   new ChillTeaserToy(),
@@ -173,4 +185,16 @@ export const setScarletAndViolet: Card[] = [
   new NsSigilyph(),
   new Postwick(),
   new Levincia(),
+  new Dudunsparceex(),
+  new NsJoltik(),
+  new NsPurrloin(),
+  new Bagon(),
+  new Shelgon(),
+  new Salamenceex(),
+  new Larvitar(),
+  new Pupitar(),
+  new Tyranitar(),
+  new Magmar(),
+  new Magmortar(),
+  new Volcanionex(),
 ];
