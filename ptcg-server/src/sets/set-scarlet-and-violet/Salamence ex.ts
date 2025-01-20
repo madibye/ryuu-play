@@ -23,7 +23,7 @@ export class Salamenceex extends PokemonCard {
       text: 'This attack does 50 damage to each of your opponent’s Benched Pokémon. (Don’t apply Weakness and Resistance for Benched Pokémon.)' 
     },
     { 
-      name: 'Hollow Hands', 
+      name: 'Dragon Impact', 
       cost: [ CardType.FIRE, CardType.WATER, CardType.COLORLESS, CardType.COLORLESS ], 
       damage: 300, 
       text: 'Discard 2 Energy from this Pokémon.' 
